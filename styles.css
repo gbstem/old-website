@@ -645,6 +645,7 @@ nav.responsive ul li.open ul li a {
     nav.responsive {
         height: 100vh;
         transition: height 0.5s;
+        font-family: 'Cabin', sans-serif
     }
 
     nav.responsive ul {
