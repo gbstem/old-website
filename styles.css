@@ -88,6 +88,11 @@ p {
     font-size: 22px;
 }
 
+p1 {
+    font-family: 'Cabin', sans-serif;
+    font-size: 15px;
+}
+
 .left {
     float: left;
     margin-bottom: 40px;
