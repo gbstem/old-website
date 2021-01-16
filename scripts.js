@@ -58,6 +58,21 @@ function dropdown() {
     }
 }
 
+function dropdown1() {
+    if ($('.about').hasClass('open')) {
+        $('.about').removeClass('open');
+    } else {
+        $('.about').addClass('open');
+    }
+    if ($('nav').hasClass('responsive') == false) {
+        if ($('nav').hasClass('dropped') && $('.posts').hasClass('open') == false) {
+            $('nav').removeClass('dropped');
+        } else {
+            $('nav').addClass('dropped');
+        }
+    }
+}
+
 jQuery(document).ready(function ($) {
 
      $(window).on("scroll", function () {
