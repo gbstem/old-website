@@ -277,7 +277,7 @@ details summary:focus {
 }
 
 ul.socials img {
-    width: 40px;
+    width: 70px;
     float: left;
     padding: 10px;
     filter: invert(13%) sepia(20%) saturate(6173%) hue-rotate(221deg) brightness(105%) contrast(94%);
@@ -359,10 +359,11 @@ nav {
     top: 0;
     right: 0;
     left: 0;
-    height: 120px;
-    font-family: 'Montserrat';
+    height: 100px;
+    font-family:monospace;
     font-size: 24px;
-    background-color: #FFF;
+    background-color: #1D2256;
+    color:white;
     z-index: 99;
     transition: height 0.5s;
     box-shadow: 0px 0px 16px 2px #888888;
