@@ -73,6 +73,21 @@ function dropdown1() {
     }
 }
 
+function dropdown2() {
+    if ($('.register').hasClass('open')) {
+        $('.register').removeClass('open');
+    } else {
+        $('.register').addClass('open');
+    }
+    if ($('nav').hasClass('responsive') == false) {
+        if ($('nav').hasClass('dropped') && $('.posts').hasClass('open') == false) {
+            $('nav').removeClass('dropped');
+        } else {
+            $('nav').addClass('dropped');
+        }
+    }
+}
+
 jQuery(document).ready(function ($) {
 
      $(window).on("scroll", function () {
