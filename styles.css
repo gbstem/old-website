@@ -91,6 +91,7 @@ p {
 p1 {
     font-family: 'Cabin', sans-serif;
     font-size: 15px;
+    line-height: 1.8;
 }
 
 .left {
