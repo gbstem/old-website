@@ -136,12 +136,12 @@ section .container {
 }
 
 section.banner {
-    margin-top: 120px;
+    margin-top: 90px;
     width: auto;
     height: auto;
     background-color: #87CEFA;
-    max-height: 444px;
-    min-width: 100vw;
+    max-height: 350px;
+/*    min-width: 100vw;*/
 }
 
 section.banner.nbimg {
@@ -445,7 +445,7 @@ nav.responsive ul li.open ul li a {
 
 nav img {
     display: inline-block;
-    height: 90px;
+    height: 100px;
     padding: 15px;
     padding-left: 34px;
     transition: height 0.5s;
