@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cantarell:ital,wght@0,400;0,700;1,400&display=swap');
 
 @keyframes fadeIn {
@@ -445,7 +449,7 @@ nav.responsive ul li.open ul li a {
 
 nav img {
     display: inline-block;
-    height: 100px;
+    height: 120px;
     padding: 15px;
     padding-left: 34px;
     transition: height 0.5s;
@@ -713,5 +717,6 @@ nav.responsive ul li.open ul li a {
         float: none;
         width: 100%;
     }
+    
 
 }
