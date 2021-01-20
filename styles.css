@@ -169,8 +169,8 @@ section.banner img {
     position: relative; 
     left: 50%;
     transform: translateX(-50%);
-    height: calc(100% - 40px);
-    max-width: calc(100% - 40px);
+    height: calc(100% - 580px);
+    max-width: calc(100% - 350px);
     height: auto;
 }
 
