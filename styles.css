@@ -153,7 +153,7 @@ section.banner {
     width: auto;
     height: auto;
     background-color: #87CEFA;
-    max-height: 350px;
+    max-height: 550px;
 /*    min-width: 100vw;*/
 }
 
@@ -169,8 +169,8 @@ section.banner img {
     position: relative; 
     left: 50%;
     transform: translateX(-50%);
-    height: calc(100% - 580px);
-    max-width: calc(100% - 350px);
+    height: calc(100% - 480px);
+    max-width: calc(100% - 250px);
     height: auto;
 }
 
