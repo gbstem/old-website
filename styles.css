@@ -138,6 +138,8 @@ section p {
     display: block;
 }
 
+
+
 section .container {
     max-width: 1220px;
     padding: 40px;
@@ -366,8 +368,9 @@ footer .watermark-logo img {
     filter: invert(13%) sepia(20%) saturate(6173%) hue-rotate(221deg) brightness(105%) contrast(94%);
 }
 
+
 nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
