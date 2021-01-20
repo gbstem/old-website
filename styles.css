@@ -374,9 +374,9 @@ nav {
     top: 0;
     right: 0;
     left: 0;
-    height: 120px;
+    height: 80px;
     font-family:monospace;
-    font-size: 36px;
+    font-size: 24px;
     background-color: #1D2256;
     color:white;
     z-index: 99;
