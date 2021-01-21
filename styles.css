@@ -108,7 +108,11 @@ section p {
     display: block;
 }
 
-
+.fade {
+  margin: 50px;
+  padding: 50px;
+  opacity: 1;
+}
 
 section .container {
     max-width: 1220px;
