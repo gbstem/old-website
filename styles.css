@@ -158,6 +158,12 @@ section#how-works {
     color: white;
 }
 
+section#mission {
+    background-color:darkgreen;
+    color: white;
+}
+
+
 section#how-works img{
     max-width 50%;
     max-height:50%;
