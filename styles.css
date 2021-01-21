@@ -241,6 +241,10 @@ section#testimonials .testimonial:nth-child(even) {
 
 details summary::-webkit-details-marker {
   display: none;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
 }
 
 details summary:focus {
