@@ -108,12 +108,8 @@ section p {
     display: block;
 }
 
-.fade {
-/*
-  margin: 0px;
-  padding: 0px;
-*/
-  opacity: 1;
+.fadeInBlock {
+  opacity: 0;
 }
 
 section .container {
