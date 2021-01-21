@@ -101,19 +101,20 @@ jQuery(document).ready(function ($) {
 
  });
 
-$(window).on("load",function() {
+$(function() {
   $(window).scroll(function() {
-    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".fade").each(function() {
-      /* Check the location of each desired element */
-      var objectBottom = $(this).offset().top + $(this).outerHeight();
-      
-      /* If the element is completely within bounds of the window, fade it in */
-      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-        if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
-      } else { //object goes out of view (scrolling up)
-        if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+    $('.fadeInBlock').each(function(i) {
+      var bottom_of_object = $(this).position().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+      /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
+      bottom_of_window = bottom_of_window + 500;
+
+      if (bottom_of_window > bottom_of_object) {
+        $(this).animate({
+          'opacity': '1'
+        }, 500);
       }
     });
-  }).scroll(); //invoke scroll-handler on page-load
+  });
 });
