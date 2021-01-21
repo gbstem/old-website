@@ -153,6 +153,11 @@ section#tracks {
     color: white;
 }
 
+section#how-works {
+    background-color: #0F2033;
+    color: white;
+}
+
 section#how-works img{
     max-width 50%;
     max-height:50%;
