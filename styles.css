@@ -275,6 +275,7 @@ details summary:focus {
 .button {
     margin: auto;
     width: fit-content;
+    border-radius: 8px;
 }
 
 .button a {
@@ -287,6 +288,7 @@ details summary:focus {
     color: #57adde;
     border: 6px solid #57adde;
     transition: all 0.2s;
+    border-radius: 8px;
 }
 
 .button a:hover {
