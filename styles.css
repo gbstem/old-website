@@ -245,7 +245,6 @@ details summary::-webkit-details-marker {
   display: inline-block;
   padding: 3px;
 }
-}
 
 details summary:focus {
     outline: none;
