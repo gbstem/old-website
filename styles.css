@@ -228,9 +228,9 @@ section#cs img {
 
 section#testimonials .testimonial {
     max-width: 45%;
-    line-height: 2em;
-    padding: 30px;
-    margin-bottom: 40px;
+    line-height: 200%;
+    padding: 5%;
+    margin-bottom: 2.5%;
 }
 
 section#testimonials .testimonial:nth-child(odd) {
