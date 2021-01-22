@@ -227,23 +227,23 @@ section#cs img {
 }
 
 section#testimonials .testimonial {
-    max-width: 570px;
+    max-width: 45%;
     line-height: 2em;
     padding: 30px;
-    margin-bottom: 40px
+    margin-bottom: 40px;
 }
 
 section#testimonials .testimonial:nth-child(odd) {
-    float: left;
-    background-color: #232b6b;
-    color: white;
-    border-radius: 20px 0px 20px 0px;
+    float: left; 
+    background-color: #FDF5E6;
+    color: #232b6b;
+    border-radius: 20px 20px 20px 20px;
 }
 
 section#testimonials .testimonial:nth-child(even) {
     float: right;
     background-color: lightgray;
-    border-radius: 0px 20px 0px 20px;
+    border-radius: 20px 20px 20px 20px;
     color: #232b6b;
 }
 
