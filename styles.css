@@ -586,7 +586,7 @@ nav.responsive ul li.open ul li a {
 }
 
 /* Hover dropdown */
-li {
+/*li {
  display: block;
  transition-duration: 0.5s;
 }
@@ -615,7 +615,7 @@ ul li ul:hover {
 ul li ul li {
   clear: both;
   width: 100%;
-}
+}*/
 
 /* Desktop/laptop */
 
