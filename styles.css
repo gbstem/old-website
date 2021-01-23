@@ -53,25 +53,25 @@ a:hover {
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 3vw;
     font-family: 'Cabin', sans-serif;
     font-weight: bold;
 }
 
 p {
     font-family: 'Verdana', sans-serif;
-    font-size: 22px;
+    font-size: 2vw;
 }
 
 p1 {
     font-family: 'Verdana', sans-serif;
-    font-size: 18px;
+    font-size: 1.8vw;
     line-height: 1.8;
 }
 
 p2 {
     font-family: 'Verdana', sans-serif;
-    font-size: 15px;
+    font-size: 1.7vw;
     line-height: 1.5;
 }
 
@@ -174,10 +174,11 @@ section#how-works img{
 
 section#faq h1, section#math h2, section#contact h2 {
     color: #37383f;
+    font-size: 2.2vw
 }
 
 section#faq summary {
-    font-size: 26px;
+    font-size: 2.9vw;
     font-weight: normal;
     font-family: cabin;
     cursor: pointer;
@@ -267,8 +268,8 @@ details summary:focus {
 .button a {
     background-color: white;
     display: block;
-    padding: 25px;
-    font-size: 17px;
+    padding: 2.5vw;
+    font-size: 1.7vw;
     text-decoration: none;
     font-weight: bold;
     color: #57adde;
