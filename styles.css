@@ -537,6 +537,7 @@ nav.top.responsive #hamburger-menu span {
     bottom: 10px;
     width: 0%;
     left: 50%;
+    background-color: whitesmoke;
 }
 
 /* Dropdown Menu Properties (desktop) */
