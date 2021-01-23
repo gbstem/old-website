@@ -672,6 +672,34 @@ ul li ul li {
       font-size: 15px;
       line-height: 1.5;
     }
+  
+    .button a {
+      background-color: white;
+      display: block;
+      padding: 25px;
+      font-size: 17px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #57adde;
+      border: 6px solid #57adde;
+      transition: all 0.2s;
+      border-radius: 8px;
+    }
+    
+    section#faq h1, section#math h2, section#contact h2 {
+      color: #37383f;
+    }
+
+    section#faq summary {
+      font-size: 26px;
+      font-weight: normal;
+      font-family: cabin;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      color: #232b6b;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
 }
 
 /* Small screen */
