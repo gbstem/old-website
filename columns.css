@@ -22,6 +22,22 @@
               padding: 10px;
             }
 
+            .worksText{
+                    float: left;    
+                    width: 40%; 
+            }
+
+
+            .worksImage{
+                float: right; 
+                width: 55%    
+                }
+
+            .slideshow{
+                float: right;
+                width: 60%;
+            }
+
             /* Clear floats after the columns */
             .row:after {
               content: "";
@@ -44,3 +60,62 @@
               margin-right: auto;
               width: 100%;
             }
+
+            
+        .csimg{
+            min-width: 50px; 
+            max-width: 300px;
+            display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 100%;
+        }
+
+
+        @media screen and (max-width: 700px) {
+            
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            .column {
+                      float: left;
+                      width: 100%;
+                      padding: 10px;
+                    }
+
+                .column2 {
+                      float: left;
+                      width: 100%;
+                      padding: 10px;
+                    }
+
+                .column3 {
+                      float: left;
+                      width: 100%;
+                      padding: 10px;
+                    }
+            
+            .worksText{
+                    float: left;    
+                    width: 100%; 
+            }
+
+            
+            .worksImage{
+                float: right; 
+                width: 100%    
+                }
+
+            .slideshow{
+                float: right;
+                width: 100%;
+            }
+            
+            .csimg{
+            max-width: 200px;
+            
+        }
+        }

@@ -52,28 +52,30 @@ a:hover {
     transition: opacity 0.2s;
 }
 
+/*
 h1 {
-    font-size: 3vw;
+    font-size: 50px;
     font-family: 'Cabin', sans-serif;
     font-weight: bold;
 }
 
 p {
     font-family: 'Verdana', sans-serif;
-    font-size: 2vw;
+    font-size: 32px;
 }
 
 p1 {
     font-family: 'Verdana', sans-serif;
-    font-size: 1.8vw;
+    font-size: 22px;
     line-height: 1.8;
 }
 
 p2 {
     font-family: 'Verdana', sans-serif;
-    font-size: 1.7vw;
+    font-size: 18px;
     line-height: 1.5;
 }
+*/
 
 .left {
     float: left;
@@ -109,7 +111,7 @@ section p {
 }
 
 .fadeInBlock {
-  opacity: 0;
+  opacity: 0.05;
 }
 
 section .container {
@@ -174,11 +176,11 @@ section#how-works img{
 
 section#faq h1, section#math h2, section#contact h2 {
     color: #37383f;
-    font-size: 2.2vw
+/*    font-size: 2.2vw*/
 }
 
 section#faq summary {
-    font-size: 2.9vw;
+    font-size: 30px;
     font-weight: normal;
     font-family: cabin;
     cursor: pointer;
@@ -265,6 +267,7 @@ details summary:focus {
     border-radius: 8px;
 }
 
+/*
 .button a {
     background-color: white;
     display: block;
@@ -277,6 +280,20 @@ details summary:focus {
     transition: all 0.2s;
     border-radius: 8px;
 }
+*/
+
+.button a {
+      background-color: white;
+      display: block;
+      padding: 25px;
+      font-size: 17px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #57adde;
+      border: 6px solid #57adde;
+      transition: all 0.2s;
+      border-radius: 8px;
+    }
 
 .button a:hover {
     background-color: #57adde;
@@ -629,28 +646,12 @@ ul li ul li {
   width: 100%;
 }*/
 
-/* Desktop/laptop */
+.logistics{
+    max-width: 80%
+}
 
-@media screen and (min-width: 1100px) {
-    #hamburger-menu {
-        display: none;
-    }
-    
-    nav.dropped ul li.open ul {
-        width: 85% ;
-    }
-    
-    nav.dropped {
-        height: 250px;
-        transition: height 0.2s;
-    }
-    
-    nav.dropped ul li ul li {
-        margin-top: 25px;
-        margin-bottom: 35px;
-    }
-  
-    h1 {
+
+h1 {
       font-size: 38px;
       font-family: 'Cabin', sans-serif;
       font-weight: bold;
@@ -672,24 +673,38 @@ ul li ul li {
       font-size: 15px;
       line-height: 1.5;
     }
-  
-    .button a {
-      background-color: white;
-      display: block;
-      padding: 25px;
-      font-size: 17px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #57adde;
-      border: 6px solid #57adde;
-      transition: all 0.2s;
-      border-radius: 8px;
+
+/* Desktop/laptop */
+
+@media screen and (min-width: 1100px) {
+    #hamburger-menu {
+        display: none;
     }
     
+    nav.dropped ul li.open ul {
+        width: 85% ;
+    }
+    
+    nav.dropped {
+        height: 250px;
+        transition: height 0.2s;
+    }
+    
+    nav.dropped ul li ul li {
+        margin-top: 25px;
+        margin-bottom: 35px;
+    }
+  
+    
+  
+    
+/*
     section#faq h1, section#math h2, section#contact h2 {
       color: #37383f;
     }
+*/
 
+/*
     section#faq summary {
       font-size: 26px;
       font-weight: normal;
@@ -700,6 +715,7 @@ ul li ul li {
       font-weight: bold;
       margin-bottom: 24px;
     }
+*/
 }
 
 /* Small screen */
@@ -752,6 +768,7 @@ ul li ul li {
         display: block;
         right: 34px;
         top: 30px;
+        
     }
 
     nav.responsive {
@@ -818,5 +835,55 @@ ul li ul li {
         width: 100%;
     }
     
+    .logistics{
+    max-width: 100%
+    }
 
+}
+
+
+@media screen and (max-width: 700px) {
+    .fadeInBlock {
+  opacity: 1;
+}
+
+h1 {
+      font-size: 24px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: bold;
+    }
+
+    p {
+      font-family: 'Verdana', sans-serif;
+      font-size: 15px;
+    }
+
+    p1 {
+      font-family: 'Verdana', sans-serif;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    p2 {
+      font-family: 'Verdana', sans-serif;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+    section#faq summary {
+    font-size: 20px
+}
+    
+    .button a {
+      background-color: white;
+      display: block;
+      padding: 20px;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #57adde;
+      border: 6px solid #57adde;
+      transition: all 0.2s;
+      border-radius: 8px;
+    }
+    
 }
