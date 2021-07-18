@@ -169,7 +169,7 @@ section#mission {
 
 
 section#how-works img{
-    max-width 50%;
+    max-width: 50%;
     max-height:50%;
 }
 
@@ -234,6 +234,10 @@ section#testimonials .testimonial {
     line-height: 200%;
     padding: 5%;
     margin-bottom: 2.5%;
+}
+
+section#testimonials #small-testimonial {
+    padding: 3%;
 }
 
 section#testimonials .testimonial:nth-child(odd) {
@@ -760,7 +764,7 @@ h1 {
 
     nav.responsive img {
         display: block;
-        max-height:  height: 160px;
+        max-height:  height 160px;
         transition: height 0.5s;
     }
 
