@@ -169,7 +169,7 @@ section#mission {
 
 
 section#how-works img{
-    max-width 50%;
+    max-width: 50%;
     max-height:50%;
 }
 
@@ -760,7 +760,7 @@ h1 {
 
     nav.responsive img {
         display: block;
-        max-height:  height: 160px;
+        max-height:  height 160px;
         transition: height 0.5s;
     }
 
