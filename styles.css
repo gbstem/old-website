@@ -236,6 +236,10 @@ section#testimonials .testimonial {
     margin-bottom: 2.5%;
 }
 
+section#testimonials #small-testimonial {
+    padding: 3%;
+}
+
 section#testimonials .testimonial:nth-child(odd) {
     float: left; 
     background-color: #FDF5E6;
