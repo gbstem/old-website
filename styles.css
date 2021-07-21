@@ -686,8 +686,17 @@
       }
       
       nav.dropped {
-          height: 250px;
+          height: 330px;
           transition: height 0.2s;
+      }
+
+      nav::-webkit-scrollbar {
+          display: none;
+      }
+      
+      nav {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
       }
       
       nav.dropped ul li ul li {
@@ -735,7 +744,7 @@
       }
       
       nav.dropped {
-          height: 200px;
+          height: 250px;
           transition: height 0.2s;
       }
       

@@ -99,7 +99,7 @@ function buildQuestion(question, quiz, results) {
         answers.innerHTML += '<div class="answer-container"><input type="radio" name="' + question + '" class="quiz-choice" id="q' + question + key + '"><label class="answer-label" for="q' + question + key + '" id="l' + question + key + '"><div class="answer-button"></div><div class="answer-text">' + questions[quiz][question].answers[key] + '</div></label></div>';
     });
     
-    submitButtonContainer.innerHTML = '<button type="button" id="submit-button">Button</button>';
+    submitButtonContainer.innerHTML = '<button type="button" id="submit-button">Submit</button>';
     document.getElementById('submit-button').addEventListener('click', function() {submitQuestion(question, quiz, results)});
 
     
