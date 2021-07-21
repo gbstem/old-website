@@ -1,0 +1,149 @@
+.info {
+    background-color: #c5c468;
+}
+
+.info-div {
+    max-width: 1220px;
+    padding: 30px;
+    display: block;
+    overflow: auto;
+    margin: auto;
+    color: #fff;
+}
+
+.selection-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.quiz-button {
+    width: 35%;
+    height: 50px;
+    margin: 5%;
+    border-radius: 15px;
+    border: 2px solid #c5c468;
+    background-color: #c5c468;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.quiz-button:hover {
+    background-color: #b5b458;
+    border-color: #b5b458;
+}
+
+.quiz-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.question-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background-color: #c5c468;
+    height: 50px;
+}
+
+.question-title {
+    padding: 15px;
+    background-color: #3b8fdf;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.answers {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px;
+    background-color: #def7a4;
+}
+
+.answer-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 3px;
+    padding: 3px;
+}
+
+.quiz-choice {
+    display: none;
+}
+
+.answer-button {
+    transition: background-color 0.2s;
+}
+
+.quiz-choice:checked + label > .answer-button {
+    background-color: #205491;
+}
+
+.answer-label {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.answer-label:hover > .answer-button {
+    background-color: #3b8fdf;
+
+}
+
+.answer-button {
+    border: 2px solid #111;
+    height: 15px;
+    width: 15px;
+    margin-right: 7px;
+    border-radius: 4px;
+    background-color: #FFF;
+}
+
+.answer-text {
+    font-size: 14px;
+}
+
+.submit-button-container {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    background-color: #def7a4;
+}
+
+#submit-button {
+    padding: 10px;
+    border: 2px solid #111;
+    border-radius: 10px;
+    transition: filter 0.2s;
+}
+
+#submit-button:hover {
+    filter: brightness(90%);
+}
+
+.results-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.results-title {
+    background-color: #b5b458;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 20px;
+}
+
+.results-display {
+    background-color: #def7a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}

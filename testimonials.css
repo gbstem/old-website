@@ -1,15 +1,8 @@
-.container {
+.testimonial-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-}
-
-.nbimg {
-    min-height: 175px;
-    text-align: center;
-    padding-top: 75px;
-    color: #fff;
 }
 
 .testimonial {
