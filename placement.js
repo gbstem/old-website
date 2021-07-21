@@ -123,7 +123,7 @@ function submitQuestion(question, results) {
     var answerChosen = false;
     for(const choice of choices) {
         if(choice.checked) {
-            selected = choice.id;
+            selected = choice.dataset.child;
             answerChosen = true;
         }
     }
