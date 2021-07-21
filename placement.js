@@ -106,7 +106,7 @@ function buildQuestion(question, results) {
     answers.innerHTML = '';
     Object.keys(questions[question].answers).forEach( (key) => {
         var answer = questions[question].answers[key];
-        answers.innerHTML += '<div class="answer-container"><input type="radio" name="' + question + '" class="quiz-choice" id="' + answer.children + '"><label class="answer-label" for="' + answer.children + '" id="l' + answer.children + '"><div class="answer-button"></div><div class="answer-text">' + answer.text + '</div></label></div>';
+        answers.innerHTML += '<div class="answer-container"><input type="radio" name="' + question + '" class="quiz-choice" data-child="' + answer.children + '" id="' + key + '"><label class="answer-label" for="' + key + '" id="l' + key + '"><div class="answer-button"></div><div class="answer-text">' + answer.text + '</div></label></div>';
     });
     
     submitButtonContainer.innerHTML = '<button type="button" id="submit-button">Submit</button>';
