@@ -33,8 +33,7 @@ var questions = {
             new Answer('5', 'grade 5', '2-5'),
             new Answer('6', 'grade 6', '6-8'),
             new Answer('7', 'grade 7', '6-8'),
-            new Answer('8', 'grade 8', '6-8'),
-            new Answer('9+', 'grade 9+', '6-8'),
+            new Answer('8', 'grade 8', '6-8')
         ]
     ),
     'K-1': new Question('Sample', []),
