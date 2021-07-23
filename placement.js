@@ -191,11 +191,17 @@ function buildQuestion(question, results) {
 }
 
 function buildQuizQuestion(questionId, quiz, level, question, results) {
+    
+    
     console.log('buildQuizQuestion')
     results.quizStarted = true;
     var prompt = '';
     var answers = [];
     if(quiz === 'Math') {
+        if(!mathQuestions[level][question]) {
+            loadQuestion('CSstart', results)
+            return;
+        }
         prompt = mathQuestions[level][question][0];
         var arr = mathQuestions[level][question][1];
         arr.forEach((key) => {
@@ -203,6 +209,10 @@ function buildQuizQuestion(questionId, quiz, level, question, results) {
         })
     }
     else if(quiz === 'CS') {
+        if(!CSQuestions[level][question]) {
+            loadQuestion('CSstart', results)
+            return;
+        }
         prompt = CSQuestions[level][question][0];
         var arr = CSQuestions[level][question][1];
         arr.forEach((key) => {
@@ -238,35 +248,40 @@ function submitQuestion(question, results) {
     }
     var selectedSplit = selected.split('-');
 
-    if(selectedStatus === 't') {
-        results.correct++;
-        console.log(selectedSplit);
-        if(selectedSplit[1] != 4) {
-            if(results.moveUp) {
-                selectedSplit[1]++;
+    console.log(results.quizStarted)
+    if(results.quizStarted) {
+        if(selectedStatus === 't') {
+            results.correct++;
+            console.log(selectedSplit);
+            if(selectedSplit[1] != 4) {
+                if(results.moveUp) {
+                    selectedSplit[1]++;
+                    results.moveUp = false;
+                }
+                else
+                {
+                    results.moveUp = true;
+                }
             }
-            else
-            {
-                results.moveUp = true;
-            }
+            selectedSplit[2]++;
         }
-        selectedSplit[2]++;
+        else
+        {
+            selectedSplit[1]--;
+        }
+        selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
+        var numQuestions = -1;
+        if(selectedSplit[0] === 'Math') {
+            numQuestions = mathQuestions[selectedSplit[1]].length;
+        }
+        if(selectedSplit[0] === 'CS') {
+            numQuestions = CSQuestions[selectedSplit[1]].length;
+        }
+        if(selectedSplit[2] === numQuestions) {
+            selected = 'CSstart';
+        }
     }
-    else
-    {
-        selectedSplit[1]--;
-    }
-    selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
-    var numQuestions = -1;
-    if(selectedSplit[0] === 'Math') {
-        numQuestions = mathQuestions[selectedSplit[1]].length;
-    }
-    if(selectedSplit[0] === 'CS') {
-        numQuestions = CSQuestions[selectedSplit[1]].length;
-    }
-    if(selectedSplit[2] === numQuestions) {
-        selected = 'CSstart';
-    }
+    
     
 
     console.log('selected', selected);
