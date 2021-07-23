@@ -22,23 +22,26 @@ class Answer {
 //quizzes are stored separate from questions in case the name of the objects CS and Math are minified.
 
 
+//I gave each question an id. So for example the below question has an id of grade. In order to more efficiently display the math and cs questions, I made it so that if the id is in the format Math-[LevelNumber]-[QuestionNumber] then it would be a math question (for example, Math-3-4 or CS-S-1)
 var questions = {
     'grade': new Question('What grade are you in?', 
         [
-            new Answer('K', 'grade K', 'K-1'),
-            new Answer('1', 'grade 1', 'K-1'),
-            new Answer('2', 'grade 2', '2-5'),
-            new Answer('3', 'grade 3', '2-5'),
-            new Answer('4', 'grade 4', '2-5'),
-            new Answer('5', 'grade 5', '2-5'),
-            new Answer('6', 'grade 6', '6-8'),
-            new Answer('7', 'grade 7', '6-8'),
-            new Answer('8', 'grade 8', '6-8')
+            new Answer('K', 'grade K', 'Math-0-0'),
+            new Answer('1', 'grade 1', 'Math-0-0'),
+            new Answer('2', 'grade 2', 'Math-0-0'),
+            new Answer('3', 'grade 3', 'Math-0-0'),
+            new Answer('4', 'grade 4', 'Math-0-0'),
+            new Answer('5', 'grade 5', 'Math-1-0'),
+            new Answer('6', 'grade 6', 'Math-1-0'),
+            new Answer('7', 'grade 7', 'Math-2-0'),
+            new Answer('8', 'grade 8', 'Math-3-0')
         ]
     ),
-    'K-1': new Question('Sample', []),
-    '2-5': new Question('Sample', []),
-    '6-8': new Question('Sample', []),
+    'CSstart': new Question('Start CS section',
+        [
+            new Answer('Begin', 'began cs section', 'CSexp')
+        ]
+    ),
     'CSexp': new Question('Do you have any prior experience in CS?', 
         [
             new Answer('Yes', 'Has experience with CS', 'Scratchpriorexp'),
@@ -52,6 +55,65 @@ var questions = {
         ]
     )
 };
+
+var mathQuestions = [
+    [
+        ['Find 56 + 37', [['83', 'f'], ['93', 't'], ['19', 'f'], ['87', 'f']]],
+        ['What is the name of a polygon with 3 sides?', [['Square', 'f'], ['Rectangle', 'f'], ['Rhombus', 'f'], ['Triangle', 't']]],
+        ['Joe had $63 before going to the store. He has $12 now. How much did he spend?', [['$51', 't'], ['$75', 'f'], ['$39', 'f'], ['$63', 'f']]],
+        ['I have 4 sides, and all of my sides are the same length. What am I?', [['Pentagon', 'f'], ['Parallelogram', 'f'], ['Trapezoid', 'f'], ['Rhombus', 't']]],
+        ['Find 90 - 20', [['50', 'f'], ['60', 'f'], ['70', 't'], ['80', 'f']]],
+        ['What is the tens digit of 67', [['10', 'f'], ['6', 't'], ['7', 'f']]],
+        ['Find 16 + 16 + 16', [['16', 'f'], ['32', 'f'], ['48', 't'], ['64', 'f']]],
+        ['When I am added to another number, I do not change that number. What am I?', [['1', 'f'], ['10', 'f'], ['0', 't'], ['+', 'f']]]
+    ],
+    [
+        ['What is 7 times 9?', [['81', 'f'], ['72', 'f'], ['63', 't'], ['54', 'f']]],
+        ['Round 3.459 to the nearest tenth', [['3', 'f'], ['3.5', 't'], ['3.4', 'f'], ['3.46', 'f']]],
+        ['Which is larger, 1/3 or 1/5?', [['1/5', 'f'], ['1/3', 't'], ['5', 'f']]],
+        ['Which of the answers is closest to 4231 + 12956', [['1600', 'f'], ['1700', 'f'], ['16000', 'f'], ['17000', 't']]],
+        ['Find 353 + 347', [['710', 'f'], ['703', 'f'], ['700', 't'], ['696', 'f']]],
+        ['What is the remainder when 771 is divided by 7?', [['1', 't'], ['6', 'f'], ['5', 'f'], ['2', 'f']]],
+        ['Farmer John has 3 times as many cows as chickens. He has 36 cows. How many chickens does he have?', [['108', 'f'], ['12', 't'], ['33', 'f'], ['39', 'f']]],
+        ['Which equation is equivalent (equal to) 7 + 7 + 7 + 7', [['7 + 4', 'f'], ['4 + 7', 'f'], ['7 * 4', 't'], ['4 * 7', 't']]],
+    ],
+    [
+        ['Find 21 * 19', [['400', 'f'], ['200', 'f'], ['399', 't'], ['199', 'f']]],
+        ['What is the area of a rectangle with sidelengths 21 and 19?', [['200', 'f'], ['199.5', 'f'], ['399', 't'], ['750', 'f']]],
+        ['3x + 4 = 34. Find x.', [['', 'f'], ['', 'f'], ['', 'f'], ['', 'f']]],
+        ['A triangle has a base length of 12 and a height of 7. What is its area?', [['84', 'f'], ['42', 't'], ['21', 'f'], ['12', 'f']]],
+        ['Find 7 * 7 * 7', [['216', 'f'], ['217', 'f'], ['218', 'f'], ['343', 't']]],
+        ['Which expression is equivalent to 7 * 7 * 7?', [['3^7', 'f'], ['3 * 7', 'f'], ['7 * 3', 'f'], ['7^3', 't']]],
+        ['Find 3.7 * 12.1', [['44', 'f'], ['44.77', 't'], ['447.7', 'f'], ['0.4477', 'f']]],
+        ['A circle has diameter 8. Which answer is closest to the area?', [['16', 'f'], ['32', 'f'], ['50', 't'], ['64', 'f']]]
+    ],
+    [
+        ['3x + 4y = 12. 7x - 2y = 11. Find (x, y)', [['(3, 6)', 'f'], ['(3, 3/2)', 't'], ['(23/17, 1)', 'f'], ['(2, 4)', 'f']]],
+        ['Find 1/3 + 1/4 + 1/5', [['1/12', 'f'], ['13/20', 'f'], ['47/60', 't'], ['73/120', 'f']]],
+        ['A box has sidelengths a, b, c, and area 11. Find the area of a box with sidelengths 3*a, 3*b, 3*c.', [['11', 'f'], ['33', 'f'], ['99', 'f'], ['297', 't']]],
+        ['Find 8^4 divided by 4^4.', [['2', 'f'], ['8', 'f'], ['16', 't'], ['256', 'f']]],
+        ['A random digit from 0 to 9 is chosen. What is the probability that it is a prime?', [['2/5', 't'], ['4/9', 'f'], ['1/2', 'f'], ['4/5', 'f']]],
+        ['Find the sum of the first 20 odd numbers.', [['210', 'f'], ['400', 't'], ['441', 'f']]],
+        ['Find the roots of x^2-2x-35', [['(5, 7)', 'f'], ['(-5, 7)', 't'], ['(5, -7)', 'f'], ['(-5, -7)', 'f']]],
+        ['f(2x-1) = x^3 + 3x^2 - 9x + 1. Find f(9).', [['77', 'f'], ['156', 't'], ['891', 'f']]]
+    ],
+    [
+        ['Find the exponent of 3 in the prime factorization of 63 factorial?', [['15', 'f'], ['30', 't'], ['63', 'f'], ['81', 'f']]]
+        ['a, b, c is an increasing geometric sequence of positive numbers. c is 48 greater than a. a, b, c - 24 is an arithmetic sequence. Find b.', [['6', 'f'], ['18', 't'], ['24', 'f'], ['56', 'f']]]
+    ]
+]
+
+var CSQuestions = {
+    scratch: [
+        ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]]
+    ],
+    py: [
+
+    ],
+    java: [
+
+    ]
+}
 
 /*
 function buildQuizButtons() {
@@ -82,15 +144,29 @@ function buildQuizStart() {
 buildQuizStart();
 
 function buildQuiz() {
+    console.log('buildQuiz')
     var quizContainer = document.getElementById('quiz-container');
 
     quizContainer.innerHTML = '<div class="question-title" id="question-title"></div><form class="quiz-form" id="quiz-form"><div class="answers" id="answers"></div><div class="submit-button-container" id="submit-button-container"></div></form>'
 
-    buildQuestion(startingQuestion, {correct: 0, total: 0});
+    loadQuestion(startingQuestion, {moveUp: false, correct: 0, total: 0, quizStarted: false});
+}
+
+function loadQuestion(questionId, results) {
+    console.log('loadQuestion')
+    var questionSplit = questionId.split('-');
+    if(questionSplit[0] === 'Math' || questionSplit[0] === 'CS') {
+        buildQuizQuestion(questionId, questionSplit[0], questionSplit[1], questionSplit[2], results);
+    }
+    else
+    {
+        buildQuestion(questions[questionId], results);
+    }
 }
 
 function buildQuestion(question, results) {
-    if(questions[question].answers.length === 0) {
+    console.log('buildQuestion')
+    if(question.answers.length === 0) {
         showResults(results);
         return;
     }
@@ -100,12 +176,12 @@ function buildQuestion(question, results) {
     var submitButtonContainer = document.getElementById('submit-button-container');
     var quizForm = document.getElementById('quiz-form');
 
-    questionTitle.innerHTML = questions[question].prompt;
+    questionTitle.innerHTML = question.prompt;
 
     answers.innerHTML = '';
-    Object.keys(questions[question].answers).forEach( (key) => {
-        var answer = questions[question].answers[key];
-        answers.innerHTML += '<div class="answer-container"><input type="radio" name="' + question + '" class="quiz-choice" data-child="' + answer.children + '" id="' + key + '"><label class="answer-label" for="' + key + '" id="l' + key + '"><div class="answer-button"></div><div class="answer-text">' + answer.text + '</div></label></div>';
+    Object.keys(question.answers).forEach( (key) => {
+        var answer = question.answers[key];
+        answers.innerHTML += '<div class="answer-container"><input type="radio" name="radio-group" class="quiz-choice" data-status="' + answer.status +'" data-child="' + answer.children + '" id="' + key + '"><label class="answer-label" for="' + key + '" id="l' + key + '"><div class="answer-button"></div><div class="answer-text">' + answer.text + '</div></label></div>';
     });
     
     submitButtonContainer.innerHTML = '<button type="button" id="submit-button">Submit</button>';
@@ -114,25 +190,88 @@ function buildQuestion(question, results) {
     
 }
 
+function buildQuizQuestion(questionId, quiz, level, question, results) {
+    console.log('buildQuizQuestion')
+    results.quizStarted = true;
+    var prompt = '';
+    var answers = [];
+    if(quiz === 'Math') {
+        prompt = mathQuestions[level][question][0];
+        var arr = mathQuestions[level][question][1];
+        arr.forEach((key) => {
+            answers.push(new Answer(key[0], key[1], questionId) );
+        })
+    }
+    else if(quiz === 'CS') {
+        prompt = CSQuestions[level][question][0];
+        var arr = CSQuestions[level][question][1];
+        arr.forEach((key) => {
+            answers.push(new Answer(key[0], key[1], questionId) );
+        })
+    }
+    
+    var q = new Question(prompt, answers);
+
+    buildQuestion(q, results);
+}
+
 function submitQuestion(question, results) {
-    results.total++;
+    console.log('submitQuestion')
+    if(results.quizStarted) {
+        results.total++;
+    }
+    
     var choices = document.getElementsByClassName('quiz-choice');
 
     var selected = null;
     var answerChosen = false;
+    var selectedStatus = '';
     for(const choice of choices) {
         if(choice.checked) {
             selected = choice.dataset.child;
+            selectedStatus = choice.dataset.status;
             answerChosen = true;
         }
     }
     if(!answerChosen) {
         return;
     }
+    var selectedSplit = selected.split('-');
 
-    console.log(selected);
+    if(selectedStatus === 't') {
+        results.correct++;
+        console.log(selectedSplit);
+        if(selectedSplit[1] != 4) {
+            if(results.moveUp) {
+                selectedSplit[1]++;
+            }
+            else
+            {
+                results.moveUp = true;
+            }
+        }
+        selectedSplit[2]++;
+    }
+    else
+    {
+        selectedSplit[1]--;
+    }
+    selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
+    var numQuestions = -1;
+    if(selectedSplit[0] === 'Math') {
+        numQuestions = mathQuestions[selectedSplit[1]].length;
+    }
+    if(selectedSplit[0] === 'CS') {
+        numQuestions = CSQuestions[selectedSplit[1]].length;
+    }
+    if(selectedSplit[2] === numQuestions) {
+        selected = 'CSstart';
+    }
+    
 
-    buildQuestion(selected, results);
+    console.log('selected', selected);
+
+    loadQuestion(selected, results);
 }
 
 function showResults(results) {
