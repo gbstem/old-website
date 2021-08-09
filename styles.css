@@ -51,31 +51,9 @@
       opacity: 0.7;
       transition: opacity 0.2s;
   }
+
   
-  /*
-  h1 {
-      font-size: 50px;
-      font-family: 'Cabin', sans-serif;
-      font-weight: bold;
-  }
-  
-  p {
-      font-family: 'Verdana', sans-serif;
-      font-size: 32px;
-  }
-  
-  p1 {
-      font-family: 'Verdana', sans-serif;
-      font-size: 22px;
-      line-height: 1.8;
-  }
-  
-  p2 {
-      font-family: 'Verdana', sans-serif;
-      font-size: 18px;
-      line-height: 1.5;
-  }
-  */
+
   
   .left {
       float: left;
@@ -149,7 +127,7 @@
   }
   
   section#register-apply {
-      background-color: #FDF5E6;
+      background-color: whitesmoke;
   }
   
   section#tracks {
@@ -163,8 +141,8 @@
   }
   
   section#mission {
-      background-color:darkgreen;
-      color: white;
+      background-color:gainsboro;
+/*      color: white;*/
   }
   
   
@@ -176,7 +154,6 @@
   
   section#faq h1, section#math h2, section#contact h2 {
       color: #37383f;
-  /*    font-size: 2.2vw*/
   }
   
   section#faq summary {
@@ -283,21 +260,19 @@
   */
   
   .button a {
-        background-color: white;
+        background-color: #57adde;
         display: block;
-        padding: 25px;
+        padding: 15px;
         font-size: 17px;
         text-decoration: none;
         font-weight: bold;
-        color: #57adde;
-        border: 6px solid #57adde;
+        color: white;
         transition: all 0.2s;
-        border-radius: 8px;
+        border-radius: 20px;
       }
   
   .button a:hover {
-      background-color: #57adde;
-      color: white;
+      border: 6px solid #57adde;
       transition: all 0.2s;
       opacity: 1 !important;
   }
@@ -427,6 +402,7 @@
       display: block;
       float: right;
       margin-top: 10px;
+      line-height: .7;
   }
   
   nav ul a {
@@ -656,16 +632,19 @@
         font-family: 'Cabin', sans-serif;
         font-weight: bold;
       }
+
+
   
       p {
         font-family: 'Verdana', sans-serif;
         font-size: 22px;
+        
       }
   
       p1 {
         font-family: 'Verdana', sans-serif;
         font-size: 18px;
-        line-height: 1.8;
+        line-height: 1.5;
       }
   
       p2 {
