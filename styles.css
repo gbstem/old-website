@@ -127,21 +127,26 @@
   }
   
   section#register-apply {
-      background-color: whitesmoke;
+      background-color: ghostwhite;
   }
   
   section#tracks {
-      background-color: #232b6b;
-      color: white;
+      background-color: aliceblue;
+/*      color: white;*/
   }
+
+    section#testimonial {
+          background-color: aliceblue;
+    /*      color: white;*/
+      }
   
   section#how-works {
-      background-color: #0F2033;
-      color: white;
+      background-color: ghostwhite;
+/*      color: white;*/
   }
   
   section#mission {
-      background-color:gainsboro;
+      background-color:ghostwhite;
 /*      color: white;*/
   }
   
@@ -260,7 +265,7 @@
   */
   
   .button a {
-        background-color: #57adde;
+        background-color: #1D2256;
         display: block;
         padding: 15px;
         font-size: 17px;
@@ -631,6 +636,7 @@
         font-size: 38px;
         font-family: 'Cabin', sans-serif;
         font-weight: bold;
+      
       }
 
 
@@ -861,17 +867,7 @@
       font-size: 20px
   }
       
-      .button a {
-        background-color: white;
-        display: block;
-        padding: 20px;
-        font-size: 14px;
-        text-decoration: none;
-        font-weight: bold;
-        color: #57adde;
-        border: 6px solid #57adde;
-        transition: all 0.2s;
-        border-radius: 8px;
-      }
+     
+  
       
   }
