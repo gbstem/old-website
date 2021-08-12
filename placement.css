@@ -76,11 +76,16 @@
     filter: brightness(90%);
 }
 
+#quiz-timer {
+    padding: 25px 10px 0px 10px;
+    background-color: #3b8fdf;
+}
+
 .question-title {
     display: flex;
     justify-content: center;
     padding: max(15px, 1.5vw);
-    font-size: max(15px, 1.5vw);
+    font-size: max(25px, 2.5vw);
     background-color: #3b8fdf;
     padding-top: max(25px, 2.5vw);
     padding-bottom: max(25px, 2.5vw);
