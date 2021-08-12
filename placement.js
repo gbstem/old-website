@@ -65,7 +65,9 @@ var mathQuestions = [
         ['Find 90 - 20.', [['50', 'f'], ['60', 'f'], ['70', 't'], ['80', 'f']]],
         ['What is the tens digit of 67?', [['10', 'f'], ['6', 't'], ['7', 'f']]],
         ['Find 16 + 16 + 16.', [['16', 'f'], ['32', 'f'], ['48', 't'], ['64', 'f']]],
-        ['When I am added to another number, I do not change that number. What am I?', [['1', 'f'], ['10', 'f'], ['0', 't'], ['+', 'f']]]
+        ['When I am added to another number, I do not change that number. What am I?', [['1', 'f'], ['10', 'f'], ['0', 't'], ['+', 'f']]],
+        ['',[[]]],
+        ['',[[]]],
     ],
     [
         ['What is 7 times 9?', [['81', 'f'], ['72', 'f'], ['63', 't'], ['54', 'f']]],
@@ -76,6 +78,8 @@ var mathQuestions = [
         ['What is the remainder when 771 is divided by 7?', [['1', 't'], ['6', 'f'], ['5', 'f'], ['2', 'f']]],
         ['Farmer John has 3 times as many cows as chickens. He has 36 cows. How many chickens does he have?', [['108', 'f'], ['12', 't'], ['33', 'f'], ['39', 'f']]],
         ['Which equation is equivalent (equal to) 7 + 7 + 7 + 7?', [['7 + 4', 'f'], ['4 + 7', 'f'], ['7 * 4', 't'], ['4 * 7', 't']]],
+        ['',[[]]],
+        ['',[[]]],
     ],
     [
         ['Find 21 * 19.', [['400', 'f'], ['200', 'f'], ['399', 't'], ['199', 'f']]],
@@ -85,7 +89,9 @@ var mathQuestions = [
         ['Find 7 * 7 * 7.', [['216', 'f'], ['217', 'f'], ['218', 'f'], ['343', 't']]],
         ['Which expression is equivalent to 7 * 7 * 7?', [['3^7', 'f'], ['3 * 7', 'f'], ['7 * 3', 'f'], ['7^3', 't']]],
         ['Find 3.7 * 12.1', [['44', 'f'], ['44.77', 't'], ['447.7', 'f'], ['0.4477', 'f']]],
-        ['A circle has diameter 8. Which answer is closest to the area?', [['16', 'f'], ['32', 'f'], ['50', 't'], ['64', 'f']]]
+        ['A circle has diameter 8. Which answer is closest to the area?', [['16', 'f'], ['32', 'f'], ['50', 't'], ['64', 'f']]],
+        ['',[[]]],
+        ['',[[]]],
     ],
     [
         ['3x + 4y = 12. 7x - 2y = 11. Find (x, y).', [['(3, 6)', 'f'], ['(3, 3/2)', 't'], ['(23/17, 1)', 'f'], ['(2, 4)', 'f']]],
@@ -103,7 +109,11 @@ var mathQuestions = [
         ['Find the exponent of 3 in the prime factorization of 63 factorial?', [['15', 'f'], ['30', 't'], ['63', 'f'], ['81', 'f']]],
         ['a, b, c is an increasing geometric sequence of positive numbers. c is 48 greater than a. a, b, c - 24 is an arithmetic sequence. Find b.', [['6', 'f'], ['18', 't'], ['24', 'f'], ['56', 'f']]],
         ['Two rectangular enclosures are to be built such that they share a wall. Farmer John has 120 feet of fencing to build the walls. What is the maximum combined area of the enclosures?'[['28800/49', 'f'], ['550', 'f'], ['600', 't'], ['648', 'f']]],
-        
+        ['',[[]]],
+        ['',[[]]],
+        ['',[[]]],
+        ['',[[]]],
+        ['',[[]]],
     ]
 ]
 
@@ -148,16 +158,14 @@ function buildQuizStart() {
 buildQuizStart();
 
 function buildQuiz() {
-    console.log('buildQuiz')
     var quizContainer = document.getElementById('quiz-container');
 
     quizContainer.innerHTML = '<div class="question-title" id="question-title"></div><form class="quiz-form" id="quiz-form"><div class="answers" id="answers"></div><div class="submit-button-container" id="submit-button-container"></div></form>'
 
-    loadQuestion(startingQuestion, {moveUp: false, correct: 0, total: 0, quizStarted: false});
+    loadQuestion(startingQuestion, {correct: 0, total: 0, quizStarted: false, level: 0, lQuestion: [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]});
 }
 
 function loadQuestion(questionId, results) {
-    console.log('loadQuestion')
     var questionSplit = questionId.split('-');
     if(questionSplit[0] === 'Math' || questionSplit[0] === 'CS') {
         buildQuizQuestion(questionId, questionSplit[0], questionSplit[1], questionSplit[2], results);
@@ -169,7 +177,7 @@ function loadQuestion(questionId, results) {
 }
 
 function buildQuestion(question, results) {
-    console.log('buildQuestion')
+
     if(question.answers.length === 0) {
         showResults(results);
         return;
@@ -195,9 +203,6 @@ function buildQuestion(question, results) {
 }
 
 function buildQuizQuestion(questionId, quiz, level, question, results) {
-    
-    
-    console.log('buildQuizQuestion')
     results.quizStarted = true;
     var prompt = '';
     var answers = [];
@@ -230,10 +235,6 @@ function buildQuizQuestion(questionId, quiz, level, question, results) {
 }
 
 function submitQuestion(question, results) {
-    console.log('submitQuestion')
-    if(results.quizStarted) {
-        results.total++;
-    }
     
     var choices = document.getElementsByClassName('quiz-choice');
 
@@ -250,39 +251,41 @@ function submitQuestion(question, results) {
     if(!answerChosen) {
         return;
     }
+    console.log(selectedStatus);
     var selectedSplit = selected.split('-');
-
-    console.log(results.quizStarted)
+    
     if(results.quizStarted) {
         if(selectedStatus === 't') {
             results.correct++;
-            if(selectedSplit[1] != 4) {
-                if(results.moveUp) {
-                    selectedSplit[1]++;
-                    results.moveUp = false;
-                }
-                else
-                {
-                    results.moveUp = true;
+        }
+        results.total++;
+        if(results.total != 0 && results.total % 5 === 0) {
+            if(results.correct <= 2) {
+                if(selectedSplit[1] != 0) {
+                    selectedSplit[1]--;
+                    selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
                 }
             }
+            else if(results.correct >= 4) {
+                if(selectedSplit[1] != 4) {
+                    selectedSplit[1]++;
+                    selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
+                }
+            }
+            results.lQuestion[selectedSplit[1]][0] += results.correct;
+            results.lQuestion[selectedSplit[1]][1] += results.total;
+            results.correct = 0;
+            results.total = 0;
         }
         else
         {
-            if(selectedSplit[1] != 0) {
-                selectedSplit[1]--;
-            }
-            
+            selectedSplit[2]++;
         }
-        selectedSplit[2]++;
+        console.log(results);
         selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
-        
+        console.log(selected);
     }
     
-    
-
-    console.log('selected', selected);
-
     loadQuestion(selected, results);
 }
 
