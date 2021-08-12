@@ -315,5 +315,9 @@ function submitQuestion(question, results) {
 
 function showResults(results) {
     var quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = '<div class="results-container"><div class="results-title">Quiz Results</div><div class="results-display">Suggested class: (some class)</div></div>'
+    quizContainer.innerHTML = '<div class="results-container"><div class="results-title">Quiz Results</div><div class="results-display">'
+    for(var i = 0; i < 5; i++) {
+        quizContainer.innerHTML += '<div class="results-text">' + results.lQuestion[i][0] + '/' + results.lQuestion[i][1] + '</div>'
+    }
+    quizContainer.innerHTML += '<div class="results-text">Suggested class: (some class)</div></div></div>'
 }
