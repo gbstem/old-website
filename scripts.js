@@ -45,48 +45,60 @@ function toggleMenu() {
 
 function dropdown() {
     if ($('.curriculum').hasClass('open')) {
+        $('nav').removeClass('dropped');
         $('.curriculum').removeClass('open');
     } else {
-        $('.curriculum').addClass('open');
-    }
-    if ($('nav').hasClass('responsive') == false) {
-        if ($('nav').hasClass('dropped') && $('.posts').hasClass('open') == false) {
-            $('nav').removeClass('dropped');
-        } else {
-            $('nav').addClass('dropped');
+        $('nav').addClass('dropped');
+        if ($('.register').hasClass('open')) {
+        $('.register').removeClass('open');
         }
+        if ($('.about').hasClass('open')) {
+            $('.about').removeClass('open');
+        }   
+         $('.curriculum').addClass('open');
+
     }
+
 }
 
 function dropdown1() {
     if ($('.about').hasClass('open')) {
+         $('nav').removeClass('dropped');
         $('.about').removeClass('open');
-    } else {
-        $('.about').addClass('open');
     }
-    if ($('nav').hasClass('responsive') == false) {
-        if ($('nav').hasClass('dropped') && $('.posts').hasClass('open') == false) {
-            $('nav').removeClass('dropped');
-        } else {
-            $('nav').addClass('dropped');
-        }
+    else {
+         $('nav').addClass('dropped');
+         if ($('.curriculum').hasClass('open')) {
+        $('.curriculum').removeClass('open');
     }
+    if ($('.register').hasClass('open')) {
+        $('.register').removeClass('open');
+    }
+     $('.about').addClass('open');
+
+    }
+
 }
 
 function dropdown2() {
     if ($('.register').hasClass('open')) {
         $('.register').removeClass('open');
+        $('nav').removeClass('dropped');
     } else {
+        $('nav').addClass('dropped');
+        if ($('.curriculum').hasClass('open')) {
+        $('.curriculum').removeClass('open');
+    }
+    if ($('.about').hasClass('open')) {
+        $('.about').removeClass('open');
+    }
         $('.register').addClass('open');
+
     }
-    if ($('nav').hasClass('responsive') == false) {
-        if ($('nav').hasClass('dropped') && $('.posts').hasClass('open') == false) {
-            $('nav').removeClass('dropped');
-        } else {
-            $('nav').addClass('dropped');
-        }
-    }
+
 }
+
+
 
 jQuery(document).ready(function ($) {
 
