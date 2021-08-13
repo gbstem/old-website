@@ -66,8 +66,8 @@ var mathQuestions = [
         ['What is the tens digit of 67?', [['10', 'f'], ['6', 't'], ['7', 'f']], 60],
         ['Find 16 + 16 + 16.', [['16', 'f'], ['32', 'f'], ['48', 't'], ['64', 'f']], 60],
         ['When I am added to another number, I do not change that number. What am I?', [['1', 'f'], ['10', 'f'], ['0', 't'], ['+', 'f']], 60],
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
     ],
     [
         ['What is 7 times 9?', [['81', 'f'], ['72', 'f'], ['63', 't'], ['54', 'f']], 60],
@@ -78,8 +78,8 @@ var mathQuestions = [
         ['What is the remainder when 771 is divided by 7?', [['1', 't'], ['6', 'f'], ['5', 'f'], ['2', 'f']], 60],
         ['Farmer John has 3 times as many cows as chickens. He has 36 cows. How many chickens does he have?', [['108', 'f'], ['12', 't'], ['33', 'f'], ['39', 'f']], 60],
         ['Which equation is equivalent (equal to) 7 + 7 + 7 + 7?', [['7 + 4', 'f'], ['4 + 7', 'f'], ['7 * 4', 't'], ['4 * 7', 't']], 60],
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
     ],
     [
         ['Find 21 * 19.', [['400', 'f'], ['200', 'f'], ['399', 't'], ['199', 'f']], 60],
@@ -90,8 +90,8 @@ var mathQuestions = [
         ['Which expression is equivalent to 7 * 7 * 7?', [['3^7', 'f'], ['3 * 7', 'f'], ['7 * 3', 'f'], ['7^3', 't']], 60],
         ['Find 3.7 * 12.1', [['44', 'f'], ['44.77', 't'], ['447.7', 'f'], ['0.4477', 'f']], 60],
         ['A circle has diameter 8. Which answer is closest to the area?', [['16', 'f'], ['32', 'f'], ['50', 't'], ['64', 'f']], 60],
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
     ],
     [
         ['3x + 4y = 12. 7x - 2y = 11. Find (x, y).', [['(3, 6)', 'f'], ['(3, 3/2)', 't'], ['(23/17, 1)', 'f'], ['(2, 4)', 'f']], 60],
@@ -102,20 +102,20 @@ var mathQuestions = [
         ['Find the sum of the first 20 odd numbers.', [['210', 'f'], ['400', 't'], ['441', 'f']], 60],
         ['Find the roots of x^2-2x-35.', [['(5, 7)', 'f'], ['(-5, 7)', 't'], ['(5, -7)', 'f'], ['(-5, -7)', 'f']], 60],
         ['f(2x-1) = x^3 + 3x^2 - 9x + 1. Find f(9).', [['77', 'f'], ['156', 't'], ['891', 'f']], 60]
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
     ],
     [
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
         ['Find the exponent of 3 in the prime factorization of 63 factorial?', [['15', 'f'], ['30', 't'], ['63', 'f'], ['81', 'f']], 60],
         ['a, b, c is an increasing geometric sequence of positive numbers. c is 48 greater than a. a, b, c - 24 is an arithmetic sequence. Find b.', [['6', 'f'], ['18', 't'], ['24', 'f'], ['56', 'f']], 60],
-        ['Two rectangular enclosures are to be built such that they share a wall. Farmer John has 120 feet of fencing to build the walls. What is the maximum combined area of the enclosures?'[['28800/49', 'f'], ['550', 'f'], ['600', 't'], ['648', 'f']], 60],
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
-        ['Sample',[[]], 60],
+        ['Two rectangular enclosures are to be built such that they share a wall. Farmer John has 120 feet of fencing to build the walls. What is the maximum combined area of the enclosures?', [['28800/49', 'f'], ['550', 'f'], ['600', 't'], ['648', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
+        ['Sample',[['Correct', 't'], ['Incorrect', 'f']], 60],
     ]
 ]
 
@@ -273,6 +273,7 @@ function updateTimer(time, results, question) {
 }
 
 function submitQuestion(question, results) {
+    console.log(question);
     
     var choices = document.getElementsByClassName('quiz-choice');
 
@@ -299,18 +300,32 @@ function submitQuestion(question, results) {
         if(results.total != 0 && results.total % 5 === 0) {
             if(results.correct <= 2) {
                 if(selectedSplit[1] != 0) {
+                    results.lQuestion[selectedSplit[1]][0] += results.correct;
+                    results.lQuestion[selectedSplit[1]][1] += results.total;
                     selectedSplit[1]--;
                     selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
+                }
+                else
+                {
+                    selectedSplit[2]++;
                 }
             }
             else if(results.correct >= 4) {
                 if(selectedSplit[1] != 4) {
+                    results.lQuestion[selectedSplit[1]][0] += results.correct;
+                    results.lQuestion[selectedSplit[1]][1] += results.total;
                     selectedSplit[1]++;
                     selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
                 }
+                else
+                {
+                    selectedSplit[2]++;
+                }
             }
-            results.lQuestion[selectedSplit[1]][0] += results.correct;
-            results.lQuestion[selectedSplit[1]][1] += results.total;
+            else
+            {
+                selectedSplit[2]++;
+            }
             results.correct = 0;
             results.total = 0;
         }
@@ -318,10 +333,9 @@ function submitQuestion(question, results) {
         {
             selectedSplit[2]++;
         }
-        console.log(results);
         selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
-        console.log(selected);
     }
+    console.log(results);
     
     loadQuestion(selected, results);
 }
