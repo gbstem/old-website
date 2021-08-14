@@ -4,7 +4,7 @@
 }
 
 .info {
-    background-color: #c5c468;
+/*    background-color: #c5c468;*/
 }
 
 .info-div {
@@ -13,7 +13,7 @@
     display: block;
     overflow: auto;
     margin: auto;
-    color: #fff;
+/*    color: #fff;*/
 }
 
 .selection-container {
@@ -69,6 +69,7 @@
     padding-bottom: max(10px, 1vw);
     border-radius: max(10px, 1vw);
     border: 2px solid #111;
+    background-color: lawngreen;
     transition: filter 0.2s;
 }
 
@@ -78,7 +79,7 @@
 
 #quiz-timer {
     padding: 25px 10px 0px 10px;
-    background-color: #3b8fdf;
+    background-color: gainsboro;
 }
 
 .question-title {
@@ -86,7 +87,7 @@
     justify-content: center;
     padding: max(15px, 1.5vw);
     font-size: max(25px, 2.5vw);
-    background-color: #3b8fdf;
+    background-color: gainsboro;
     padding-top: max(25px, 2.5vw);
     padding-bottom: max(25px, 2.5vw);
 }
@@ -95,7 +96,6 @@
     display: flex;
     flex-flow: column nowrap;
     padding: max(10px, 1vw);
-    background-color: #def7a4;
 }
 
 .answer-container {
@@ -103,6 +103,8 @@
     flex-flow: row wrap;
     margin: max(3px, 0.3vw);
     padding: max(3px, 0.3vw);
+    align-items: center;
+    justify-content: center;
 }
 
 .quiz-choice {
@@ -143,15 +145,21 @@
 .submit-button-container {
     padding-left: max(15px, 1.5vw);
     padding-bottom: max(15px, 1.5vw);
-    background-color: #def7a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #submit-button {
     padding: max(10px, 1vw);
+    background-color: lawngreen;
     border: 2px solid #111;
     border-radius: max(10px, 1vw);
     transition: filter 0.2s;
     font-size: max(15px, 1.5vw);
+/*    float: center;*/
+    margin-left: auto;
+  margin-right: auto;
 }
 
 #submit-button:hover {
@@ -174,7 +182,6 @@
 }
 
 .results-display {
-    background-color: #def7a4;
     display: flex;
     align-items: center;
     justify-content: center;
