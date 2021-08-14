@@ -54,6 +54,10 @@
     font-size: max(20px, 2vw);
 }
 
+#quiz-timer {
+    font-size: max(14px, min(22px, 2.2vw) );
+}
+
 #quiz-start-button-container {
     display: flex;
     align-items: center;
