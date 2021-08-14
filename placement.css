@@ -87,7 +87,7 @@
 }
 
 .question-title {
-    display: flex;
+/*    display: flex;*/
     justify-content: center;
     padding: max(15px, 1.5vw);
     font-size: max(25px, 2.5vw);

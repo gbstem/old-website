@@ -22,7 +22,7 @@ class Answer {
 //quizzes are stored separate from questions in case the name of the objects CS and Math are minified.
 
 
-//I gave each question an id. So for example the below question has an id of grade. In order to more efficiently display the math and cs questions, I made it so that if the id is in the format Math-[LevelNumber]-[QuestionNumber] then it would be a math question (for example, Math-3-4 or CS-S-1)
+//I gave each question an id. So for example the below question has an id of grade. In order to more efficiently display the math and cs questions, I made it so that if the id is in the format Math-[LevelNumber]-[QuestionNumber] then it would be a math question (for example, Math-3-4 or CS-0-1)
 var questions = {
     'grade': new Question('What grade are you in?', 
         [
@@ -39,30 +39,30 @@ var questions = {
     ),
     'CSstart': new Question('Start CS section',
         [
-            new Answer('Begin', 'began cs section', 'Scratchexp')
+            new Answer('Begin', 'began cs section', '0exp')
         ]
     ),
-    'Scratchexp': new Question('Do you have any prior experience with Scratch?', 
+    '0exp': new Question('Do you have any prior experience with Scratch?', 
         [
-            new Answer('Yes', 'Has experience with Scratch', 'Scratch'),
-            new Answer('No', 'No experience with Scratch', 'Pythonexp')
+            new Answer('Yes', 'Has experience with Scratch', 'CS-0-0'),
+            new Answer('No', 'No experience with Scratch', '1exp')
         ]
     ),
-    'Pythonexp': new Question('Do you have any prior experience with Python?', 
+    '1exp': new Question('Do you have any prior experience with Python?', 
         [
-            new Answer('Yes', 'Has experience with Python', 'Python'),
-            new Answer('No', 'No experience with Pythonn', 'Javaexp')
+            new Answer('Yes', 'Has experience with Python', 'CS-1-0'),
+            new Answer('No', 'No experience with Python', '2exp')
         ]
     ),
-    'Javaexp': new Question('Do you have any prior experience with Java?', 
+    '2exp': new Question('Do you have any prior experience with Java?', 
         [
-            new Answer('Yes', 'Has experience with Java', 'Java'),
-            new Answer('No', 'No experience with Java', 'Webexp')
+            new Answer('Yes', 'Has experience with Java', 'CS-2-0'),
+            new Answer('No', 'No experience with Java', '3exp')
         ]
     ),
-    'Webexp': new Question('Do you have any prior experience with HTML, CSS, and/or Javascript?', 
+    '3exp': new Question('Do you have any prior experience with HTML, CSS, and/or Javascript?', 
         [
-            new Answer('Yes', 'Has experience with web', 'Web'),
+            new Answer('Yes', 'Has experience with web', 'CS-3-0'),
             new Answer('No', 'No experience with web', 'End')
         ]
     ),
@@ -131,29 +131,29 @@ var mathQuestions = [
     ]
 ]
 
-var CSQuestions = {
-    scratch: [
+var CSQuestions = [
+    [
         ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
         ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
         ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
         ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
         ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
     ],
-    py: [
-        ['Python question', [['Correct', 't'], ['Incorrect', 'f']]],
+    [
+        ['What would be printed when the following code is run?\nprint("Hello World")', [['Correct', 't'], ['Incorrect', 'f']]],
         ['Python question', [['Correct', 't'], ['Incorrect', 'f']]],
         ['Python question', [['Correct', 't'], ['Incorrect', 'f']]],
         ['Python question', [['Correct', 't'], ['Incorrect', 'f']]],
         ['Python question', [['Correct', 't'], ['Incorrect', 'f']]],
     ],
-    java: [
+    [
         ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
         ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
         ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
         ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
         ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
     ]
-}
+]
 
 /*
 function buildQuizButtons() {
@@ -219,7 +219,14 @@ function buildQuestion(question, results, timer) {
     var submitButtonContainer = document.getElementById('submit-button-container');
     var quizForm = document.getElementById('quiz-form');
 
-    questionTitle.innerHTML = question.prompt;
+
+    var questionSplit = question.prompt.split('\n');
+    questionTitle.innerHTML = ''
+    questionSplit.forEach(line => {
+        questionTitle.innerHTML += '<p>' + line + '</p>' ;
+    });
+    
+    
 
     answers.innerHTML = '';
     Object.keys(question.answers).forEach( (key) => {
@@ -310,47 +317,58 @@ function submitQuestion(question, results) {
     var selectedSplit = selected.split('-');
     
     if(results.quizStarted) {
-        if(selectedStatus === 't') {
-            results.correct++;
-        }
-        results.total++;
-        if(results.total != 0 && results.total % 5 === 0) {
-            if(results.correct <= 2) {
-                if(selectedSplit[1] != 0) {
-                    results.lQuestion[selectedSplit[1]][0] += results.correct;
-                    results.lQuestion[selectedSplit[1]][1] += results.total;
-                    selectedSplit[1]--;
-                    selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
-                }
-                else
-                {
-                    selectedSplit[2]++;
-                }
+        if (selectedSplit[0] === 'Math'){
+            if(selectedStatus === 't') {
+                results.correct++;
             }
-            else if(results.correct >= 4) {
-                if(selectedSplit[1] != 4) {
-                    results.lQuestion[selectedSplit[1]][0] += results.correct;
-                    results.lQuestion[selectedSplit[1]][1] += results.total;
-                    selectedSplit[1]++;
-                    selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
+            results.total++;
+            if(results.total != 0 && results.total % 5 === 0) {
+                if(results.correct <= 2) {
+                    if(selectedSplit[1] != 0) {
+                        results.lQuestion[selectedSplit[1]][0] += results.correct;
+                        results.lQuestion[selectedSplit[1]][1] += results.total;
+                        selectedSplit[1]--;
+                        selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
+                    }
+                    else
+                    {
+                        selectedSplit[2]++;
+                    }
+                }
+                else if(results.correct >= 4) {
+                    if(selectedSplit[1] != 4) {
+                        results.lQuestion[selectedSplit[1]][0] += results.correct;
+                        results.lQuestion[selectedSplit[1]][1] += results.total;
+                        selectedSplit[1]++;
+                        selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
+                    }
+                    else
+                    {
+                        selectedSplit[2]++;
+                    }
                 }
                 else
                 {
                     selectedSplit[2]++;
                 }
+                results.correct = 0;
+                results.total = 0;
             }
             else
             {
                 selectedSplit[2]++;
             }
-            results.correct = 0;
-            results.total = 0;
+            selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
         }
-        else
-        {
-            selectedSplit[2]++;
+        else if (selectedSplit[0] === 'CS'){
+            if(selectedStatus === 't') {
+                results.correct++;
+            }
+            results.total++;
+            if(results.total >=5 && (results.correct / results.total) <= 0.2){
+                selected = String(selectedSplit[1] + 1) + "exp"
+            }
         }
-        selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
     }
     console.log(results);
    
