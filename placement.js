@@ -28,32 +28,44 @@ var questions = {
         [
             new Answer('K', 'grade K', 'Math-0-0'),
             new Answer('1', 'grade 1', 'Math-0-0'),
-            new Answer('2', 'grade 2', 'Math-0-0'),
-            new Answer('3', 'grade 3', 'Math-0-0'),
-            new Answer('4', 'grade 4', 'Math-0-0'),
-            new Answer('5', 'grade 5', 'Math-1-0'),
-            new Answer('6', 'grade 6', 'Math-1-0'),
-            new Answer('7', 'grade 7', 'Math-2-0'),
+            new Answer('2', 'grade 2', 'Math-1-0'),
+            new Answer('3', 'grade 3', 'Math-1-0'),
+            new Answer('4', 'grade 4', 'Math-2-0'),
+            new Answer('5', 'grade 5', 'Math-2-0'),
+            new Answer('6', 'grade 6', 'Math-3-0'),
+            new Answer('7', 'grade 7', 'Math-3-0'),
             new Answer('8', 'grade 8', 'Math-3-0')
         ]
     ),
     'CSstart': new Question('Start CS section',
         [
-            new Answer('Begin', 'began cs section', 'CSexp')
-        ]
-    ),
-    'CSexp': new Question('Do you have any prior experience in CS?', 
-        [
-            new Answer('Yes', 'Has experience with CS', 'Scratchpriorexp'),
-            new Answer('No', 'No experience with CS', 2)
+            new Answer('Begin', 'began cs section', 'Scratchexp')
         ]
     ),
     'Scratchexp': new Question('Do you have any prior experience with Scratch?', 
         [
-            new Answer('Yes', 'Has experience with OOP', 3),
-            new Answer('No', 'Has experience with OOP', 3)
+            new Answer('Yes', 'Has experience with Scratch', 'Scratch'),
+            new Answer('No', 'No experience with Scratch', 'Pythonexp')
         ]
-    )
+    ),
+    'Pythonexp': new Question('Do you have any prior experience with Python?', 
+        [
+            new Answer('Yes', 'Has experience with Python', 'Python'),
+            new Answer('No', 'No experience with Pythonn', 'Javaexp')
+        ]
+    ),
+    'Javaexp': new Question('Do you have any prior experience with Java?', 
+        [
+            new Answer('Yes', 'Has experience with Java', 'Java'),
+            new Answer('No', 'No experience with Java', 'Webexp')
+        ]
+    ),
+    'Webexp': new Question('Do you have any prior experience with HTML, CSS, and/or Javascript?', 
+        [
+            new Answer('Yes', 'Has experience with web', 'Web'),
+            new Answer('No', 'No experience with web', 'End')
+        ]
+    ),
 };
 
 var mathQuestions = [
@@ -180,6 +192,10 @@ function buildQuiz() {
 }
 
 function loadQuestion(questionId, results) {
+    if (questionId === "End"){
+        showResults(results);
+        return;
+    }
     console.log(questionId);
     var questionSplit = questionId.split('-');
     if(questionSplit[0] === 'Math' || questionSplit[0] === 'CS') {
@@ -193,10 +209,10 @@ function loadQuestion(questionId, results) {
 
 function buildQuestion(question, results, timer) {
 
-    if(question.answers.length === 0) {
-        showResults(results);
-        return;
-    }
+//    if(question.answers.length === 0) {
+//        showResults(results);
+//        return;
+//    }
 
     var questionTitle = document.getElementById('question-title');
     var answers = document.getElementById('answers');
@@ -225,6 +241,7 @@ function buildQuizQuestion(questionId, quiz, level, question, results) {
     var timer = 0;
     if(quiz === 'Math') {
         if(!mathQuestions[level][question]) {
+            results.quizStarted = false
             loadQuestion('CSstart', results)
             return;
         }
@@ -236,10 +253,10 @@ function buildQuizQuestion(questionId, quiz, level, question, results) {
         timer = mathQuestions[level][question][2];
     }
     else if(quiz === 'CS') {
-        if(!CSQuestions[level][question]) {
-            loadQuestion('CSstart', results)
-            return;
-        }
+//        if(!CSQuestions[level][question]) {
+//            loadQuestion('CSstart', results)
+//            return;
+//        }
         prompt = CSQuestions[level][question][0];
         var arr = CSQuestions[level][question][1];
         arr.forEach((key) => {
@@ -281,8 +298,8 @@ function submitQuestion(question, results) {
     var answerChosen = false;
     var selectedStatus = '';
     for(const choice of choices) {
-        selected = choice.dataset.child;
         if(choice.checked) {
+            selected = choice.dataset.child;
             selectedStatus = choice.dataset.status;
             answerChosen = true;
         }
@@ -336,7 +353,7 @@ function submitQuestion(question, results) {
         selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
     }
     console.log(results);
-    
+   
     loadQuestion(selected, results);
 }
 
