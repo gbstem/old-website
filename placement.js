@@ -133,11 +133,26 @@ var mathQuestions = [
 
 var CSQuestions = [
     [
-        ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
-        ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
-        ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
-        ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
-        ['What is a sprite in Scratch?', [['A kind of bug', 'f'], ['A soda company', 'f'], ['A species of deciduous tree found in North America', 'f'], ['A kind of image that can be used in Scratch ', 't']]],
+        ['Which of the following buttons is the create sprite button?\n<img src="scratchPlacementImages/image3.png" class="center" style="width:50%">', [['Option 1', 'f'], ['Option 2', 'f'], ['Option 3', 't'], ['Option 4', 'f']]],
+        
+        ['Which option below would you choose to draw your own backdrop?\n<img src="scratchPlacementImages/image8.png" class="center" style="width:50%">', [['Option 1', 'f'], ['Option 2', 'f'], ['Option 3', 't'], ['Option 4', 'f']]],
+        
+        ['What will the following snippet of code do when the green flag is clicked?\n<img src="scratchPlacementImages/image6.png" class="center" style="width:50%">', [['Say “Hello!” for 2 seconds, then change color effect by 25, then change size by 10.', 'f'], ['Say “Hello!” for 2 seconds, and at the same time, change color effect by 25 and size by 10.', 'f'], ['Say “Hello!” for 2 seconds.', 'f'], ['Nothing', 't']]],
+        
+        ['How many steps forward will the Scratch cat move in total, when the green flag is clicked?\n<img src="scratchPlacementImages/image4.png" class="center" style="width:50%">', [['50 steps', 'f'], ['60 steps', 't'], ['30 steps', 'f'], ['10 steps', 'f']]],
+        
+        ['The scratch cat is currently at the coordinates (300, 200). Where will the scratch cat go if I click the green flag?\n<img src="scratchPlacementImages/image2.png" class="center" style="width:50%">', [['(289, 215)', 't'], ['(311, 215)', 'f'], ['(311, 185)', 'f'], ['(289, 185)', 'f']]],
+        
+        ['What does the broadcast block do?\n<img src="scratchPlacementImages/image7.png" class="center" style="width:50%">', [['The broadcast block sends a message to the user via a popup on their screen', 'f'], ['The broadcast block sends out radio signals to other computers around you with your chosen message.', 'f'], ['The broadcast block sends the chosen message to the scratch console.', 'f'], ['The broadcast block sends a message to other sprites, which can trigger the “when I receive _____” event block.', 'f']]],
+        
+         ['Under what conditions will the Scratch cat say “Hello!” when the green flag is clicked?\n<img src="scratchPlacementImages/image5.png" class="center" style="width:50%">', [['The scratch cat will say “Hello!” regardless of conditions', 'f'], ['The scratch cat will say “Hello!” if touching the mouse pointer or edge', 'f'], ['The scratch cat will say “Hello!” if not touching both the mouse pointer and edge', 't'], ['The scratch cat will say “Hello!” if not touching the mouse pointer or the edge', 'f']]],
+        
+        ['If I type in “Sarah” when prompted, what will the Scratch cat say in return?\n<img src="scratchPlacementImages/image1.png" class="center" style="width:50%">', [['The scratch cat will say “Hi, Sarah”', 't'], ['The scratch cat will say “Hi”, then “Sarah”', 'f'], ['The scratch cat will not say anything', 'f'], ['The scratch cat will say “Hi, Answer”', 'f']]],
+        
+         ['Which of the following is the best description of a variable?', [['A variable is an unknown factor which makes our code work or not work', 'f'], ['A variable is a variance from what we expect to happen when we run a program.', 'f'], ['A variable is like a container, it can hold different values in our program depending on what we put into it.', 't'], ['A variable is a mysterious mystery which I don’t understand', 'f']]],
+        
+        ['What will happen when the green flag is clicked?\n<img src="scratchPlacementImages/image9.png" class="center" style="width:50%">', [['An error occurs', 'f'], ['The sprite points in the direction 60 degrees, and moves 5 steps forward', 'f'], ['The sprite points in the direction 5 degrees, and moves 60 steps forward', 't'], ['he sprite prompts the user to specify x and y, then points in direction x degrees, and moves y steps.', 'f']]],
+        
     ],
     [
         ['What would be printed when the following code is run?\nprint("Hello World")', [['Correct', 't'], ['Incorrect', 'f']]],
@@ -147,12 +162,21 @@ var CSQuestions = [
         ['Python question', [['Correct', 't'], ['Incorrect', 'f']]],
     ],
     [
-        ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
-        ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
-        ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
-        ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
-        ['Java question', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['Assume x is any integer, which of the expressions can replace the following code segment so that the program will always print the same result when executed?\n\nif (x > 0)\n{ \n&emsp;x = -x;\n}\nif (x < 0) \n{\n&emsp;x = 0;\n}\n\nSystem.out.print(x); \n', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['JWhich of the following expressions is equivalent to the following code segment? \n&emsp;\n&emsp;!(a || b) \n', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['What are the values of a and b after the for loop finishes?\n\nint a = 10;\nint b = 3;\nint x;\nfor (int i = 1; i <= 6; i++) \n{\n&emsp;x = a; \n&emsp;a = i + b;\n&emsp;b = t - i; \n}\n', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['At a high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 inclusive is a B, and below 83 is a C. Which of the following code segments will assign the correct letter to grade for a given integer score?\n\n\nI.\n\nif (score >= 93)\n{\n&emsp;&emsp;grade = “A”; \n&emsp;}\nif (score >= 84 && score <= 92)\n{\n&emsp;&emsp;grade = “B”;\n&emsp;}\nif (score < 83)\n{\n&emsp;&emsp;grade = “C”;\n&emsp;}\n\n\nII.\nif (score >= 93)\n{\n&emsp;&emsp;grade = “A”; \n&emsp;}\nif (score >= 84)\n{\n&emsp;&emsp;grade = “B”;\n&emsp;}\nif (score < 83)\n{\n&emsp;&emsp;grade = “C”;\n&emsp;}\n\n\nIII.\nif (score >= 93)\n{\n&emsp;&emsp;grade = “A”; \n&emsp;}\nelse if (score >= 84)\n{\n&emsp;&emsp;grade = “B”;\n&emsp;}\nelse \n{\n&emsp;&emsp;grade = “C”;\n&emsp;}\n', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['Given the following method declaration, and int[] array = {8, 3, 1}, what is the value in array[1] after test(a); is run?\n\n&emsp;public static int test(int [] array)\n{\n&emsp;&emsp;array[1]--; \n&emsp;&emsp;return (array[1] * 3);&emsp;\n&emsp;} \n', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['Which statement best describes the purpose of a class constructor? ', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['Given the following code segment, what will be printed when it is executed?\n\nArrayList<Integer> list1 = new ArrayList<Integer>();\nlist1.add(new Integer(1));\nlist1.add(new Integer(2));\nlist1.add(new Integer(3));\nlist1.set(2, new Integer(4));\nlist1.add(2, new Integer(5));\nlist1.add(new Integer(6));\nSystem.out.println(list1); \n', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['Mary is 5 years older than James. Three years in the future Mary’s age will be twice Jame’s age. What should replace  “condition” in line 3 to solve this problem? \n\n&emsp;for (int m = 1; m <= 100; m++)\n{\n&emsp;&emsp;for (int j = 1; j <= 100; j++)\n&emsp;{\n&emsp;&emsp;&emsp;if (condition)\n&emsp;&emsp;&emsp;{\n&emsp;&emsp;&emsp;&emsp;System.out.println(“Mary is “ + m + “ and James is “ + j); \n&emsp;&emsp;&emsp;}\n&emsp;&emsp;}\n&emsp;} \n', [['Correct', 't'], ['Incorrect', 'f']]],
+         ['Which of the following is printed as the result of the call m(1234);?\n\n&emsp;public void m(int x)\n{\n&emsp;&emsp;System.out.print (x % 10);\n\n&emsp;    if ((x / 10) != 0)\n    {\n&emsp;&emsp;&emsp;m(x / 10); \n&emsp;    }\n\n&emsp;    System.out.print(x % 10); \n&emsp;} \n', [['Correct', 't'], ['Incorrect', 'f']]],
+        ['When will a sequential search be faster than a binary search?', [['Correct', 't'], ['Incorrect', 'f']]],
+    ],
+    [
+        ['When will a sequential search be faster than a binary search?', [['Correct', 't'], ['Incorrect', 'f']]],
     ]
+    
 ]
 
 /*
@@ -188,22 +212,22 @@ function buildQuiz() {
 
     quizContainer.innerHTML = '<div id="quiz-timer"></div><div class="question-title" id="question-title"></div><form class="quiz-form" id="quiz-form"><div class="answers" id="answers"></div><div class="submit-button-container" id="submit-button-container"></div></form>'
 
-    loadQuestion(startingQuestion, {correct: 0, total: 0, quizStarted: false, level: 0, lQuestion: [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]});
+    loadQuestion(startingQuestion, {quizStarted: false, level: 0, lQuestion: [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]], csQuestion: [[0, 0], [0, 0], [0, 0], [0, 0]]});
 }
 
 function loadQuestion(questionId, results) {
-    if (questionId === "End"){
+    console.log(questionId);
+    var questionSplit = questionId.split('-');
+    if (questionSplit[0] === "End"){
         showResults(results);
         return;
     }
-    console.log(questionId);
-    var questionSplit = questionId.split('-');
     if(questionSplit[0] === 'Math' || questionSplit[0] === 'CS') {
         buildQuizQuestion(questionId, questionSplit[0], questionSplit[1], questionSplit[2], results);
     }
     else
     {
-        buildQuestion(questions[questionId], results, 0);
+        buildQuestion(questions[questionSplit[0]], results, 0);
     }
 }
 
@@ -260,10 +284,18 @@ function buildQuizQuestion(questionId, quiz, level, question, results) {
         timer = mathQuestions[level][question][2];
     }
     else if(quiz === 'CS') {
-//        if(!CSQuestions[level][question]) {
-//            loadQuestion('CSstart', results)
-//            return;
-//        }
+
+        if(!CSQuestions[level][question]) {
+            if (!CSQuestions[parseInt(level)+1] ){
+                loadQuestion('End', results);
+            }
+            else{
+                loadQuestion(String(parseInt(level) + 1) + 'exp', results);
+                results.quizStarted = false
+            }
+            return;
+        }
+        
         prompt = CSQuestions[level][question][0];
         var arr = CSQuestions[level][question][1];
         arr.forEach((key) => {
@@ -319,14 +351,16 @@ function submitQuestion(question, results) {
     if(results.quizStarted) {
         if (selectedSplit[0] === 'Math'){
             if(selectedStatus === 't') {
-                results.correct++;
+                results.lQuestion[selectedSplit[1]][0] += 1;
             }
-            results.total++;
-            if(results.total != 0 && results.total % 5 === 0) {
-                if(results.correct <= 2) {
+            
+            results.lQuestion[selectedSplit[1]][1] += 1;
+            
+            var correct = results.lQuestion[selectedSplit[1]][0]
+            var total = results.lQuestion[selectedSplit[1]][1]
+            if(total != 0 && total % 5 === 0) {
+                if(correct/total <= 0.5) {
                     if(selectedSplit[1] != 0) {
-                        results.lQuestion[selectedSplit[1]][0] += results.correct;
-                        results.lQuestion[selectedSplit[1]][1] += results.total;
                         selectedSplit[1]--;
                         selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
                     }
@@ -335,10 +369,8 @@ function submitQuestion(question, results) {
                         selectedSplit[2]++;
                     }
                 }
-                else if(results.correct >= 4) {
+                else if(correct >= 0.5) {
                     if(selectedSplit[1] != 4) {
-                        results.lQuestion[selectedSplit[1]][0] += results.correct;
-                        results.lQuestion[selectedSplit[1]][1] += results.total;
                         selectedSplit[1]++;
                         selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
                     }
@@ -351,35 +383,125 @@ function submitQuestion(question, results) {
                 {
                     selectedSplit[2]++;
                 }
-                results.correct = 0;
-                results.total = 0;
             }
             else
             {
                 selectedSplit[2]++;
             }
-            selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2];
         }
         else if (selectedSplit[0] === 'CS'){
             if(selectedStatus === 't') {
-                results.correct++;
+                results.csQuestion[selectedSplit[1]][0] += 1;
             }
-            results.total++;
-            if(results.total >=5 && (results.correct / results.total) <= 0.2){
-                selected = String(selectedSplit[1] + 1) + "exp"
+            results.csQuestion[selectedSplit[1]][1] += 1;
+            var correct = results.csQuestion[selectedSplit[1]][0]
+            var total = results.csQuestion[selectedSplit[1]][1]
+            console.log('correct: ' + correct)
+            console.log('total: ' + total)
+            if(total >=5 && (correct / total) <= 0.2){
+                if (selectedSplit[1] != 3){
+                    selectedSplit[0] = String(parseInt(selectedSplit[1]) + 1) + "exp";
+                    results.quizStarted = false;
+                }
+                else{
+                    selectedSplit[0] = 'End'
+                }
+            }
+            else{
+                selectedSplit[2]++;
             }
         }
+        selected = selectedSplit[0] + '-' + selectedSplit[1] + '-' + selectedSplit[2]; 
     }
     console.log(results);
    
     loadQuestion(selected, results);
 }
 
+function enoughMath(results, csClass, recommendedMathClass){
+    var requiredMath = [2,4,6,4];
+    return (recommendedMathClass >= (requiredMath[csClass]));
+}
+
+function enoughCS(results, csClass){
+    var requiredCSfluency = [1,2,3,2];
+    var csFluency = 0;
+    if (results.csQuestion[2][1] != 0 && (results.csQuestion[2][0] / results.csQuestion[2][1] >= 0.4)){
+        csFluency += 3
+    }
+    else if (results.csQuestion[1][1] != 0 && (results.csQuestion[1][0] / results.csQuestion[1][1] >= 0.6)){
+        csFluency += 3
+    }
+    else if (results.csQuestion[1][1] != 0 && (results.csQuestion[1][0] / results.csQuestion[1][1] >= 0.4)){
+        csFluency += 2
+    }
+    else if (results.csQuestion[0][1] != 0 && (results.csQuestion[0][0] / results.csQuestion[0][1] >= 0.6)){
+        csFluency += 2
+    }
+    else if (results.csQuestion[3][1] != 0 && (results.csQuestion[3][0] / results.csQuestion[3][1] >= 0.4)){
+        csFluency += 2
+    }
+    else if (results.csQuestion[2][1] != 0 && (results.csQuestion[2][0] / results.csQuestion[2][1] >= 0.4)){
+        csFluency += 2
+    }
+    else if (results.csQuestion[0][1] != 0 && (results.csQuestion[0][0] / results.csQuestion[0][1] >= 0.4)){
+        csFluency += 1
+    }
+    
+    return (csFluency >= (requiredCSfluency[csClass]));
+}
+
+
+
 function showResults(results) {
     var quizContainer = document.getElementById('quiz-container');
     quizContainer.innerHTML = '<div class="results-container"><div class="results-title">Quiz Results</div><div class="results-display">'
+    var recommendedMathClass = 0;
+    var recommendedCSclasses = [];
+    var recommendedEngineeringClass = 'None';
+
+    var code = 'm'
     for(var i = 0; i < 5; i++) {
-        quizContainer.innerHTML += '<div class="results-text">' + results.lQuestion[i][0] + '/' + results.lQuestion[i][1] + '</div>'
+        code += results.lQuestion[i][0] + '/' + results.lQuestion[i][1] + '-'
+        if (results.lQuestion[i][1] != 0 && results.lQuestion[i][0] / results.lQuestion[i][1] >= 0.8){
+            recommendedMathClass = i + 1
+        }
+
     }
-    quizContainer.innerHTML += '<div class="results-text">Suggested class: (some class)</div></div></div>'
+    code += 'c'
+    
+    for(var i = 0; i < 4; i++) {
+        code += results.csQuestion[i][0] + '/' + results.csQuestion[i][1] + '-'
+        if (enoughMath(results, i, recommendedMathClass) || enoughCS(results ,i)){
+            recommendedCSclasses.push(i)
+        }
+    }
+    
+    
+    if (recommendedMathClass >= 4){
+        recommendedEngineeringClass = 'Engineering II'
+    }
+    else if (recommendedMathClass >= 2){
+        recommendedEngineeringClass = 'Engineering I'
+    }
+    
+    var csClasses = ['Scratch','Python','Java','Web development']
+    quizContainer.innerHTML += '<div class="results-text"><p>Suggested computer science classes: </p></div></div></div>'
+    if (recommendedCSclasses.length == 0){
+        quizContainer.innerHTML += '<div class="results-text"><p>None</p></div></div></div>'
+    }
+    for(var i = 0; i < recommendedCSclasses.length; i++) {
+        quizContainer.innerHTML += '<div class="results-text"><p>' + csClasses[i] + '</p></div></div></div>'
+    }
+    
+    var recommendedMathClassFormatted = 'None';
+    if (recommendedMathClass != 0){
+        recommendedMathClassFormatted = 'Mathematics ' + recommendedMathClass 
+    }
+    
+    quizContainer.innerHTML += '<div class="results-text"><p>Recommended math class: ' + recommendedMathClassFormatted + '</p></div></div></div>'
+    
+    quizContainer.innerHTML += '<div class="results-text"><p>Recommended engineering class: ' + recommendedEngineeringClass + '</p></div></div></div>'
+    
+    quizContainer.innerHTML += '<div class="results-text"><p>Please paste the following code onto the registration form: ' + code + '</p></div></div></div>'
 }

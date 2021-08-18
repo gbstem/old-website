@@ -111,6 +111,16 @@
     justify-content: center;
 }
 
+.results-text {
+    display: flex;
+    flex-flow: row wrap;
+    margin: max(3px, 0.3vw);
+    padding: max(3px, 0.3vw);
+    align-items: center;
+    justify-content: center;
+}
+
+
 .quiz-choice {
     display: none;
 }
@@ -193,7 +203,6 @@
     font-weight: bold;
     padding-top: max(20px, 2vw);
     padding-bottom: max(20px, 2vw);
-
 }
 
 @media screen and (min-width: 700px) {
