@@ -79,7 +79,7 @@ var mathQuestions = [
         ['School starts at 9 o’clock in the morning and ends after 6 hours. What time does school end?', [['12 p.m.', 'f'], ['1 p.m.', 'f'], ['2 p.m.', 'f'], ['3 p.m.', 't']], 60],
         ['Gene’s mother has 2 pairs of scissors. The blue pair of scissors is 10 inches long, and the red pair of scissors is 3 inches shorter. How long is the red pair of scissors?',[['3 inches', 'f'], ['7 inches', 't'], ['7 feet', 'f'], ['13 inches', 'f']], 60],
         ['James has a nickel and 4 pennies. Ian has a dime. Who has more money?',[['Ian', 't'], ['James', 'f']], 60],
-        ['To save energy, the elevator in the office building only runs from 8 o’clock to 10 o’clock in the morning and 3 o’clock to 6 o’clock in the afternoon. How many hours does the elevator run every day?',[['3', 'f'], ['4', 'f']['5', 't'], ['6', 'f']], 60],
+        ['To save energy, the elevator in the office building only runs from 8 o’clock to 10 o’clock in the morning and 3 o’clock to 6 o’clock in the afternoon. How many hours does the elevator run every day?',[['3', 'f'], ['4', 'f'],['5', 't'], ['6', 'f']], 60],
 
     ],
     [
@@ -114,7 +114,7 @@ var mathQuestions = [
     ['Find 8^4 divided by 4^4.', [['2', 'f'], ['8', 'f'], ['16', 't'], ['256', 'f']], 60],
     ['A random digit from 0 to 9 is chosen. What is the probability that it is a prime?', [['2/5', 't'], ['4/9', 'f'], ['1/2', 'f'], ['4/5', 'f']], 60],
     ['Find the sum of the first 20 odd numbers.', [['210', 'f'], ['400', 't'], ['441', 'f']], 60],
-    ['Cara begins delivering newspapers. On her first day at work, she delivers 32 newspapers. Every day after that, she delivers five more newspapers than she did the day before. On day 2, she delivers 37 newspapers. On day 3, she delivers 42. How many newspapers does Cara deliver on day 8?', [['57', 'f'], ['62', 'f'], ['67', 't'], ['72', 't']], 60]
+    ['Cara begins delivering newspapers. On her first day at work, she delivers 32 newspapers. Every day after that, she delivers five more newspapers than she did the day before. On day 2, she delivers 37 newspapers. On day 3, she delivers 42. How many newspapers does Cara deliver on day 8?', [['57', 'f'], ['62', 'f'], ['67', 't'], ['72', 't']], 60],
     ['Terrence’s scores on his first four History tests were 80, 85, 91 and 95. To get an A- in the class, he needs to have an average of 90 or better. What score must he make on the fifth test to get an A- in the class?', [['85', 'f'], ['88', 'f'], ['96', 'f'], ['99', 't']], 60],
     ['A perfect circle has a circumference of 8 x pi (or 8π) inches. I split the circle in half, creating two perfect semicircles. What is the area of each semicircle?',[['4π', 't'], ['8π', 't'], ['12π', 'f'], ['16π', 'f']], 60],
     ['Annie and Bonnie are running laps around a 400-meter oval track. They started together, but Annie has pulled ahead because she runs 25% faster than Bonnie. How many laps will Annie have run when she first passes Bonnie?',[['3', 'f'], ['3 ⅓', 'f'], ['4', 'f'], ['5', 't']], 60]
@@ -122,12 +122,12 @@ var mathQuestions = [
     [
         ['3x + 4y = 12. 7x - 2y = 11. Find (x, y).', [['(3, 6)', 'f'], ['(3, 3/2)', 't'], ['(23/17, 1)', 'f'], ['(2, 4)', 'f']], 60],
         ['Find the roots of x^2-2x-35.', [['(5, 7)', 'f'], ['(-5, 7)', 't'], ['(5, -7)', 'f'], ['(-5, -7)', 'f']], 60],
-        ['There is a rope running from the top of a flagpole to a hook in the ground. The flagpole is 8 meters high, and the hook is 15 meters from its base. How long is the rope?', [['7', 'f'], ['11', 'f'], ['(5, -7)', 't'], ['23', 'f']], 60],
+        ['There is a rope running from the top of a flagpole to a hook in the ground. The flagpole is 8 meters high, and the hook is 15 meters from its base. How long is the rope?', [['7', 'f'], ['11', 'f'], ['17', 't'], ['23', 'f']], 60],
         ['Find the exponent of 3 in the prime factorization of 63 factorial.', [['15', 'f'], ['30', 't'], ['63', 'f'], ['81', 'f']], 60],
         ['a, b, c is an increasing geometric sequence of positive numbers. c is 48 greater than a. a, b, c - 24 is an arithmetic sequence. Find b.', [['6', 'f'], ['18', 't'], ['24', 'f'], ['56', 'f']], 60],
         ['Two rectangular enclosures are to be built such that they share a wall. Farmer John has 120 feet of fencing to build the walls. What is the maximum combined area of the enclosures?', [['28800/49', 'f'], ['550', 'f'], ['600', 't'], ['648', 'f']], 60],
-        ['f(2x-1) = x^3 + 3x^2 - 9x + 1. Find f(9).', [['77', 'f'], ['156', 't'], ['891', 'f']], 60]
-        ['During a basketball game, your team scored three times as many 2-point field goals than it did 3-point field goals, and scored a total of 90 points. How many field goals did your team score? There were no one-point free throws.',[['20', 'f'], ['30', 'f']['40', 't'], ['50', 'f']], 60],
+        ['f(2x-1) = x^3 + 3x^2 - 9x + 1. Find f(9).', [['77', 'f'], ['156', 't'], ['891', 'f']], 60],
+        ['During a basketball game, your team scored three times as many 2-point field goals than it did 3-point field goals, and scored a total of 90 points. How many field goals did your team score? There were no one-point free throws.',[['20', 'f'], ['30', 'f'],['40', 't'], ['50', 'f']], 60],
         ['A six-sided cubical die, numbered 1 through 6 inclusive, and a ten-sided decahedral die, numbered 1 through 10 inclusive, are rolled. What is the probability that the sum of the numbers shown on the top faces is less than 8 ? Express your answer as a common fraction.',[['1/4', 'f'], ['7/20', 't'], ['11/18', 'f'], ['2/9', 'f']], 60],
         ['Ernie was counting the jellybeans in his bag. He noticed that when he arranged them in rows of either 6 or 8 beans, he was always left with 3 ‘extras’, but when he arranged them in rows of 5, there were none left over. What’s the least possible number of jellybeans that he has?', [['75', 't'], ['85', 'f'], ['95', 't'], ['100', 't']], 60],
     ]
@@ -315,6 +315,7 @@ function buildQuizQuestion(questionId, quiz, level, question, results) {
         }
         prompt = mathQuestions[level][question][0];
         var arr = mathQuestions[level][question][1];
+        console.log(mathQuestions[level][question][1])
         arr.forEach((key) => {
             answers.push(new Answer(key[0], key[1], questionId) );
         })
@@ -396,7 +397,7 @@ function submitQuestion(question, results) {
             var correct = results.lQuestion[selectedSplit[1]][0]
             var total = results.lQuestion[selectedSplit[1]][1]
             if(total != 0 && total % 5 === 0) {
-                if(correct/total <= 0.5) {
+                if(correct/total < 0.6) {
                     if(selectedSplit[1] != 0) {
                         selectedSplit[1]--;
                         selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
@@ -406,7 +407,7 @@ function submitQuestion(question, results) {
                         selectedSplit[2]++;
                     }
                 }
-                else if(correct >= 0.5) {
+                else if(correct >= 0.6) {
                     if(selectedSplit[1] != 4) {
                         selectedSplit[1]++;
                         selectedSplit[2] = results.lQuestion[selectedSplit[1]][1];
@@ -499,7 +500,7 @@ function showResults(results) {
     var code = 'm'
     for(var i = 0; i < 5; i++) {
         code += results.lQuestion[i][0] + '/' + results.lQuestion[i][1] + '-'
-        if (results.lQuestion[i][1] != 0 && results.lQuestion[i][0] / results.lQuestion[i][1] >= 0.7){
+        if (results.lQuestion[i][1] != 0 && results.lQuestion[i][0] / results.lQuestion[i][1] >= 0.6){
             recommendedMathClass = i + 1
         }
 
@@ -538,7 +539,7 @@ function showResults(results) {
     }
     quizContainer.innerHTML += '<div class="results-text"><p>' + csRecommendationFormatted + '</p></div></div></div>'
     
-    quizContainer.innerHTML += '<div class="results-text"><p1>If there was more than one class listed above, we recommend going to gbstem.org/cs to learn about the differences between the classes to make the best choice. </p1></div></div></div>'
+    quizContainer.innerHTML += '<div class="results-text"><p1>If there was more than one class listed above, we recommend going to gbstem.org/cs to learn about the differences between the classes to make the best choice. We encourage students to challenge themselves, so we recommend students to choose the harder class if there was more than one eligble CS class. Specifically, Scratch is the easiest, followed by Python or web development, followed by Java.</p1></div></div></div>'
     
     var recommendedMathClassFormatted = 'None';
     if (recommendedMathClass != 0){
