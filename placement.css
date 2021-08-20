@@ -116,8 +116,10 @@
     flex-flow: row wrap;
     margin: max(3px, 0.3vw);
     padding: max(3px, 0.3vw);
+/*
     align-items: center;
     justify-content: center;
+*/
 }
 
 
@@ -197,8 +199,10 @@
 
 .results-display {
     display: flex;
+/*
     align-items: center;
     justify-content: center;
+*/
     font-size: max(28px, 2.8vw);
     font-weight: bold;
     padding-top: max(20px, 2vw);
