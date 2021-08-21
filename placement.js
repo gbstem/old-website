@@ -267,7 +267,7 @@ function buildQuizQuestion(questionId, quiz, level, question, results) {
 
 function updateTimer(time, results, question) {
     document.getElementById('quiz-timer').innerHTML = 'Timer: ' + Math.floor(time/60) + ':' + Math.round(time%60);
-    if(time === 0) {
+    if(time <= 0) {
         submitQuestion(question, results);
     }
 }

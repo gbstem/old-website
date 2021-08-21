@@ -249,10 +249,63 @@
                             <span class="close">&times;</span>
                             <p1>Kalina is a lover of both math and computer science, but also marketing and outreach! She has a position as a marketing director for The Tomorrow Project, a national nonprofit organization, and runs multiple successful social media accounts. In her spare time, she enjoys hiking, activism, and playing the piano.</p1>
                           </div>
-              </div>
+                </div>
               </div>
                 
                 </div>
+
+              <div class="row">
+                <div class="column3">
+                  <img src="headshots/claire.jpeg" style="min-width: 50px; max-width: 300px" class="circular--square" class="center">
+                  <h2 class="center"><a href="#claire" class="myBtn">Claire Perry</a></h2>
+                  <!--<h3 class="center" >Wellesley</h3>-->
+                  <h3 class="center" >JAVA INSTRUCTOR</h3>
+                  <div id="claire" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p1>My name is Claire and I am a high school senior and Java instructor at gbSTEM. I love math and computer science and I am a member of my local FIRST robotics team as well as an editor for the business-STEM journal. Also, I am a stage technician for my school's theatre group. My hobbies also include visual art and graphic design.</p1>
+                    </div>
+                  </div>
+                </div>
+                <div class="column3">
+                  <img src="headshots/sophia.jpg" style="min-width: 50px; max-width: 300px" class="circular--square" class="center">
+                  <h2 class="center"><a href="#sophia" class="myBtn">Sophia Xie</a></h2>
+                  <!--<h3 class="center" >Wellesley</h3>-->
+                  <h3 class="center" >MATH 1 CURRICULUM DEVELOPER</h3>
+                  <div id="claire" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p1>Sophia is a junior at Wayland High School. Her favorite subjects are math and science. In 10th grade, she self-studied for the AP Computer Science A exam. Sophia is a part of her school's rowing and nordic skiing teams, as well as the science olympiad club. In her free time she enjoys hiking, reading, and listening to music!</p1>
+                    </div>
+                  </div>
+                </div>
+                <div class="column3">
+                  <img src="headshots/roz.jpg" style="min-width: 50px; max-width: 300px" class="circular--square" class="center">
+                  <h2 class="center"><a href="#roz" class="myBtn">Roz Rafati</a></h2>
+                  <!--<h3 class="center" >Wellesley</h3>-->
+                  <h3 class="center" >ENGINEERING CURRICULUM DEVELOPER</h3>
+                  <div id="claire" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p1>Some of my interests include playing softball and drawing. I have been involved with the BYTE tutoring program at BHS which tutors elementary school students free of cost. I have taken some entry engineering courses throughout this summer which have really sparked my interest in participating in the program. I have been able to incorporate my love for drawing with engineering and it has been an amazing experience for me.</p1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column3">
+                  <img src="headshots/michael.jpg" style="min-width: 50px; max-width: 300px" class="circular--square" class="center">
+                  <h2 class="center"><a href="#michael" class="myBtn">Roz Rafati</a></h2>
+                  <!--<h3 class="center" >Wellesley</h3>-->
+                  <h3 class="center" >ENGINEERING CURRICULUM DEVELOPER</h3>
+                  <div id="claire" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p1>Some of my interests include playing softball and drawing. I have been involved with the BYTE tutoring program at BHS which tutors elementary school students free of cost. I have taken some entry engineering courses throughout this summer which have really sparked my interest in participating in the program. I have been able to incorporate my love for drawing with engineering and it has been an amazing experience for me.</p1>
+                    </div>
+                  </div>
+                </div>
+              </div>
             
             <script>
                             var modal = document.getElementsByClassName('modal');
@@ -264,6 +317,21 @@
                             // Get the <span> element that closes the modal
                             var span = document.getElementsByClassName("close");
 
+                            //I put these in a loop instead:
+                            
+                            for(var index = 0; index < modal.length; index++) {
+                              (function(index) {
+                                btn[index].onclick = function() {
+                                  modal[index].style.display = "block";
+                                }
+                                span[index].onclick = function() {
+                                  modal[index].style.display = "none";
+                                }
+                              })(index);
+                            }
+                          
+
+                          /*
                             // When the user clicks the button, open the modal 
                             btn[0].onclick = function() {
                                 modal[0].style.display = "block";
@@ -319,7 +387,7 @@
                             span[7].onclick = function() {
                                 modal[7].style.display = "none";
                             }
-                            
+                          */
                             // When the user clicks anywhere outside of the modal, close it
                             window.onclick = function(event) {
                                 if (event.target == modal) {
