@@ -73,7 +73,7 @@ var mathQuestions = [
         ['In the fridge, there are 4 stacks of chocolate puddings, 7 stacks of brownies and 5 stacks of cupcakes. How many stacks of dessert are there?',[['11', 'f'], ['14', 'f'], ['16', 't'], ['21', 'f']], 60],
         ['Write the addition sentence that fits this: “Jennifer prepares 3 new recipes for the next month. On top of the original 9 recipes she has, she has a total of 12 recipes.”',[['9 + 3 = 12', 't'], ['12 - 9 = 3', 'f'], ['3 + 12 = 9', 'f'], ['9 + 12 = 3', 'f']], 60],
         ['Mrs. Hilt had ten pennies and found 5 more. Then she gave 3 pennies to Jacob. How many pennies did she have left?', [['8', 'f'], ['12', 't'], ['15', 'f'], ['18', 'f']], 60],
-        ['5 + 7 + 9 = ?', [['11', 'f'], ['12', 'f'], ['21', 'f'], ['579', 'f']], 60],
+        ['5 + 7 + 9 = ?', [['11', 'f'], ['12', 'f'], ['21', 't'], ['579', 'f']], 60],
         ['What is the name of a shape with three sides?', [['Triangle', 't'], ['Rhombus', 'f'], ['Square', 'f'], ['Pentagon', 'f']], 60],
         ['14 - 9 = ?',[['3', 'f'], ['5', 't'], ['7', 'f'], ['23', 'f']], 60],
         ['School starts at 9 o’clock in the morning and ends after 6 hours. What time does school end?', [['12 p.m.', 'f'], ['1 p.m.', 'f'], ['2 p.m.', 'f'], ['3 p.m.', 't']], 60],
@@ -100,7 +100,7 @@ var mathQuestions = [
         ['Round 3.459 to the nearest tenth.', [['3', 'f'], ['3.5', 't'], ['3.4', 'f'], ['3.46', 'f']], 60],
         ['Which is larger, 1/3 or 1/5?', [['1/5', 'f'], ['1/3', 't']], 60],
         ['Sam wants to hang five stockings at the fireplace: three large stockings and two small stockings. Each larger stocking is 5 inches wide, and the two smaller stockings are 3 inches wide each. What is the total width of the five stockings?', [['16', 'f'], ['25', 'f'], ['6', 'f'], ['21', 't']], 60],
-        ['At lunchtime, an ice cream parlor served 6 ¼ scoops of chocolate ice cream, 5 ¾ scoops of vanilla and 2 ¾ scoops of strawberry. How many scoops of ice cream did the parlor serve in total?', [['12 ½' , 'f'], ['12 ¾' , 'f'], ['13 ¾' , 't'], ['14 ¼' , 'f']], 60],
+        ['At lunchtime, an ice cream parlor served 6 ¼ scoops of chocolate ice cream, 5 ¾ scoops of vanilla and 2 ¾ scoops of strawberry. How many scoops of ice cream did the parlor serve in total?', [['12 ½' , 'f'], ['12 ¾' , 'f'], ['13 ¾' , 'f'], ['14 ¾' , 't']], 60],
         ['What is the remainder when 771 is divided by 7?', [['1', 't'], ['6', 'f'], ['5', 'f'], ['2', 'f']], 60],
         ['Farmer John has 3 times as many cows as chickens. He has 36 cows. How many chickens does he have?', [['108', 'f'], ['12', 't'], ['33', 'f'], ['39', 'f']], 60],
         ['The school has $904 to spend on markers. Each package of markers costs $8. How many packages of markers can the school buy?',[['68', 'f'],['113', 't'], ['121', 'f'], ['138', 'f']], 60],
@@ -115,12 +115,12 @@ var mathQuestions = [
     ['A random digit from 0 to 9 is chosen. What is the probability that it is a prime?', [['2/5', 't'], ['4/9', 'f'], ['1/2', 'f'], ['4/5', 'f']], 60],
     ['Find the sum of the first 20 odd numbers.', [['210', 'f'], ['400', 't'], ['441', 'f']], 60],
     ['Cara begins delivering newspapers. On her first day at work, she delivers 32 newspapers. Every day after that, she delivers five more newspapers than she did the day before. On day 2, she delivers 37 newspapers. On day 3, she delivers 42. How many newspapers does Cara deliver on day 8?', [['57', 'f'], ['62', 'f'], ['67', 't'], ['72', 't']], 60],
-    ['Terrence’s scores on his first four History tests were 80, 85, 91 and 95. To get an A- in the class, he needs to have an average of 90 or better. What score must he make on the fifth test to get an A- in the class?', [['85', 'f'], ['88', 'f'], ['96', 'f'], ['99', 't']], 60],
+    ['Terrence’s scores on his first four History tests were 80, 85, 91 and 95. To get an A in the class, he needs to have an average of 90 or better. What score must he make on the fifth test to get an A in the class?', [['85', 'f'], ['88', 'f'], ['96', 'f'], ['99', 't']], 60],
     ['A perfect circle has a circumference of 8 x pi (or 8π) inches. I split the circle in half, creating two perfect semicircles. What is the area of each semicircle?',[['4π', 't'], ['8π', 't'], ['12π', 'f'], ['16π', 'f']], 60],
     ['Annie and Bonnie are running laps around a 400-meter oval track. They started together, but Annie has pulled ahead because she runs 25% faster than Bonnie. How many laps will Annie have run when she first passes Bonnie?',[['3', 'f'], ['3 ⅓', 'f'], ['4', 'f'], ['5', 't']], 60]
         ],
     [
-        ['3x + 4y = 12. 7x - 2y = 11. Find (x, y).', [['(3, 6)', 'f'], ['(3, 3/2)', 't'], ['(23/17, 1)', 'f'], ['(2, 4)', 'f']], 60],
+        ['3x + 4y = 12. 7x - 2y = 11. Find (x, y).', [['(3, 6)', 'f'], ['(2, 3/2)', 't'], ['(23/17, 1)', 'f'], ['(2, 4)', 'f']], 60],
         ['Find the roots of x^2-2x-35.', [['(5, 7)', 'f'], ['(-5, 7)', 't'], ['(5, -7)', 'f'], ['(-5, -7)', 'f']], 60],
         ['There is a rope running from the top of a flagpole to a hook in the ground. The flagpole is 8 meters high, and the hook is 15 meters from its base. How long is the rope?', [['7', 'f'], ['11', 'f'], ['17', 't'], ['23', 'f']], 60],
         ['Find the exponent of 3 in the prime factorization of 63 factorial.', [['15', 'f'], ['30', 't'], ['63', 'f'], ['81', 'f']], 60],
@@ -129,7 +129,7 @@ var mathQuestions = [
         ['f(2x-1) = x^3 + 3x^2 - 9x + 1. Find f(9).', [['77', 'f'], ['156', 't'], ['891', 'f']], 60],
         ['During a basketball game, your team scored three times as many 2-point field goals than it did 3-point field goals, and scored a total of 90 points. How many field goals did your team score? There were no one-point free throws.',[['20', 'f'], ['30', 'f'],['40', 't'], ['50', 'f']], 60],
         ['A six-sided cubical die, numbered 1 through 6 inclusive, and a ten-sided decahedral die, numbered 1 through 10 inclusive, are rolled. What is the probability that the sum of the numbers shown on the top faces is less than 8 ? Express your answer as a common fraction.',[['1/4', 'f'], ['7/20', 't'], ['11/18', 'f'], ['2/9', 'f']], 60],
-        ['Ernie was counting the jellybeans in his bag. He noticed that when he arranged them in rows of either 6 or 8 beans, he was always left with 3 ‘extras’, but when he arranged them in rows of 5, there were none left over. What’s the least possible number of jellybeans that he has?', [['75', 't'], ['85', 'f'], ['95', 't'], ['100', 't']], 60],
+        ['Ernie was counting the jellybeans in his bag. He noticed that when he arranged them in rows of either 6 or 8 beans, he was always left with 3 ‘extras’, but when he arranged them in rows of 5, there were none left over. What’s the least possible number of jellybeans that he has?', [['75', 't'], ['85', 'f'], ['95', 'f'], ['100', 'f']], 60],
     ]
 ]
 
