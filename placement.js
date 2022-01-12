@@ -123,12 +123,12 @@ var mathQuestions = [
         ['3x + 4y = 12. 7x - 2y = 11. Find (x, y).', [['(3, 6)', 'f'], ['(2, 3/2)', 't'], ['(23/17, 1)', 'f'], ['(2, 4)', 'f']], 60],
         ['Find the roots of x^2-2x-35.', [['(5, 7)', 'f'], ['(-5, 7)', 't'], ['(5, -7)', 'f'], ['(-5, -7)', 'f']], 60],
         ['There is a rope running from the top of a flagpole to a hook in the ground. The flagpole is 8 meters high, and the hook is 15 meters from its base. How long is the rope?', [['7', 'f'], ['11', 'f'], ['17', 't'], ['23', 'f']], 60],
-        ['Find the exponent of 3 in the prime factorization of 63 factorial.', [['15', 'f'], ['30', 't'], ['63', 'f'], ['81', 'f']], 60],
-        ['a, b, c is an increasing geometric sequence of positive numbers. c is 48 greater than a. a, b, c - 24 is an arithmetic sequence. Find b.', [['6', 'f'], ['18', 't'], ['24', 'f'], ['56', 'f']], 60],
+        ['The length of a rectangle is four times its width. If the area is 100 square meters, what is the length of the rectangle?', [['15', 'f'], ['20', 't'], ['25', 'f'], ['30', 'f']], 60],
+        ['Dahlia bought a few marbles and divided them equally among four of her friends and her brother, Jake. While playing, Jake lost 2 marbles. He has 7 marbles now. How many marbles did Dahlia buy, in all?', [['36', 'f'], ['45', 't'], ['50', 'f'], ['54', 'f']], 60],
         ['Two rectangular enclosures are to be built such that they share a wall. Farmer John has 120 feet of fencing to build the walls. What is the maximum combined area of the enclosures?', [['28800/49', 'f'], ['550', 'f'], ['600', 't'], ['648', 'f']], 60],
-        ['f(2x-1) = x^3 + 3x^2 - 9x + 1. Find f(9).', [['77', 'f'], ['156', 't'], ['891', 'f']], 60],
-        ['During a basketball game, your team scored three times as many 2-point field goals than it did 3-point field goals, and scored a total of 90 points. How many field goals did your team score? There were no one-point free throws.',[['20', 'f'], ['30', 'f'],['40', 't'], ['50', 'f']], 60],
-        ['A six-sided cubical die, numbered 1 through 6 inclusive, and a ten-sided decahedral die, numbered 1 through 10 inclusive, are rolled. What is the probability that the sum of the numbers shown on the top faces is less than 8 ? Express your answer as a common fraction.',[['1/4', 'f'], ['7/20', 't'], ['11/18', 'f'], ['2/9', 'f']], 60],
+        ['Cindy has been given four chores to complete today: vacuum, mop, dust and laundry. Because Cindy finds doing laundry especially unpleasant, she wants to do that chore last. Given this, in how many different orders can Cindy complete her chores?', [['3', 'f'], ['4', 'f'], ['6', 't'], ['24', 'f']], 60],
+        ['In Mr. Patterson’s class, the average score among students who studied for an exam was 78. The average among students who did not study was 54. The overall class average was 70. What fraction of the class did not study?',[['1/3', 't'], ['2/5', 'f'],['9/22', 'f'], ['9/13', 'f']], 60],
+        ['What is the median of the first seven prime numbers?',[['3', 'f'], ['5', 'f'], ['7', 't'], ['11', 'f']], 60],
         ['Ernie was counting the jellybeans in his bag. He noticed that when he arranged them in rows of either 6 or 8 beans, he was always left with 3 ‘extras’, but when he arranged them in rows of 5, there were none left over. What’s the least possible number of jellybeans that he has?', [['75', 't'], ['85', 'f'], ['95', 'f'], ['100', 'f']], 60],
     ]
 ]
