@@ -9,7 +9,8 @@
 
 .info-div {
     max-width: 1220px;
-    padding: max(30px, 3vw);
+    padding: max(30px, 2.7vw);
+    padding-bottom: max(20px, 1vw);
     display: block;
     overflow: auto;
     margin: auto;
@@ -73,7 +74,7 @@
     padding-bottom: max(10px, 1vw);
     border-radius: max(10px, 1vw);
     border: 2px solid #111;
-    background-color: lawngreen;
+    background-color: #4CAF50;
     transition: filter 0.2s;
 }
 
@@ -109,6 +110,7 @@
     padding: max(3px, 0.3vw);
     align-items: center;
     justify-content: center;
+    text-indent: 5px;
 }
 
 .results-text {
@@ -168,11 +170,13 @@
 
 #submit-button {
     padding: max(10px, 1vw);
-    background-color: lawngreen;
+    background-color: #4CAF50;
     border: 2px solid #111;
     border-radius: max(10px, 1vw);
     transition: filter 0.2s;
     font-size: max(15px, 1.5vw);
+    height: 65px;
+    width: 150px;
 /*    float: center;*/
     margin-left: auto;
   margin-right: auto;
@@ -214,9 +218,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        font-size: max(27px, 2.5vw);
+        padding-top: 5px;
+        padding-bottom: 10px;
+        font-size: max(27px, 2.3vw);
+        font-family: monospace;
     }
     
     #quiz-start-button-container {
@@ -228,14 +233,18 @@
     }
     
     #quiz-start-button {
-        font-size: max(25px, 2.5vw);
+       /* font-size: max(25px, 2.5vw); */
+        font-size: max(25px, 2vw);
+        font-family: sans-serif;
         padding-left: max(35px, 2.5vw);
         padding-right: max(35px, 2.5vw);
         padding-top: max(15px, 1vw);
         padding-bottom: max(15px, 1vw);
         border-radius: max(15px, 1vw);
-        border: 3px solid #111;
+        border: 2px solid #111;
         transition: filter 0.2s;
+        height: 65px;
+        width: 200px;
     }
     
     #quiz-start-button:hover {
