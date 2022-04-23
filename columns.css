@@ -16,6 +16,12 @@
               padding: 10px;
             }
 
+        .columnTest {
+              float: inherit;
+              width: 50%;
+              padding: 10px;
+            }
+
         .column3 {
               float: left;
               width: 33%;

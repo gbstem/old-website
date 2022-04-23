@@ -95,6 +95,7 @@ var mathQuestions = [
         ['Tyler saved $32.80 from his school allowance. He bought 2 superhero action figures which cost a total of $7.90 and a toy robot for $8.70. How much does he have left?',[['$8.30', 'f'], ['$16.20', 't'],['$24.10', 'f'],['$49.40', 'f']], 60],
 
     ],
+    
     [
         ['A pizza is cut into twelve slices. If I eat half the pizza and my mom eats another sixth of the pizza, then how many slices are left?', [['5', 'f'], ['2', 'f'], ['4', 't'], ['5', 'f']], 60],
         ['Round 3.459 to the nearest tenth.', [['3', 'f'], ['3.5', 't'], ['3.4', 'f'], ['3.46', 'f']], 60],
@@ -107,6 +108,7 @@ var mathQuestions = [
         ['12 of the tables at Cassies Italian Restaurant are full and the other 8 tables are empty. What is the ratio of the number of full tables to the number of empty tables?',[['3:2', 't'], ['8:20', 'f'], ['12:20', 'f'], ['8:12', 'f']], 60],
         ['A furniture maker used 1 ¾ of a can of paint to paint some chairs. She used ¼ of a can of paint for each chair. How many chairs did she paint?',[['6', 'f'], ['7', 't'], ['8', 'f'], ['9', 'f']], 60]
     ],
+    
     [
     ['Which of the following is equivalent to 7 * 7 * 7 * 7?', [['7 + 4', 'f'], ['4 ^ 7', 'f'], ['7 ^ 4', 't'], ['4 * 7', 'f']], 60],
     ['Find 1/3 + 1/4 + 1/5.', [['1/12', 'f'], ['13/20', 'f'], ['47/60', 't'], ['73/120', 'f']], 60],
@@ -119,6 +121,7 @@ var mathQuestions = [
     ['A perfect circle has a circumference of 8 x pi (or 8π) inches. I split the circle in half, creating two perfect semicircles. What is the area of each semicircle?',[['4π', 't'], ['8π', 't'], ['12π', 'f'], ['16π', 'f']], 60],
     ['Annie and Bonnie are running laps around a 400-meter oval track. They started together, but Annie has pulled ahead because she runs 25% faster than Bonnie. How many laps will Annie have run when she first passes Bonnie?',[['3', 'f'], ['3 ⅓', 'f'], ['4', 'f'], ['5', 't']], 60]
         ],
+    
     [
         ['3x + 4y = 12. 7x - 2y = 11. Find (x, y).', [['(3, 6)', 'f'], ['(2, 3/2)', 't'], ['(23/17, 1)', 'f'], ['(2, 4)', 'f']], 60],
         ['Find the roots of x^2-2x-35.', [['(5, 7)', 'f'], ['(-5, 7)', 't'], ['(5, -7)', 'f'], ['(-5, -7)', 'f']], 60],
@@ -156,6 +159,7 @@ var CSQuestions = [
         ['What will happen when the green flag is clicked?\n<img src="scratchPlacementImages/image9.png" class="center" style="width:50%">', [['An error occurs', 'f'], ['The sprite points in the direction 60 degrees, and moves 5 steps forward', 'f'], ['The sprite points in the direction 5 degrees, and moves 60 steps forward', 't'], ['he sprite prompts the user to specify x and y, then points in direction x degrees, and moves y steps.', 'f']]],
         
     ],
+    
     [
         ['Which of the following will run without errors?', [['print(“hello” + 5)', 'f'], ['print(int(“hello”) + 5)', 'f'],['print(hello + 5)', 'f'], ['print(“hello” + str(5))', 't']]],
         
@@ -177,6 +181,7 @@ var CSQuestions = [
         
         ['What would running the following code print?\n\nmy_list = [5,9,9,1]\nmy_list.append(4)\nprint(my_list)', [['[5,9,9,1]', 'f'],['[5,9,9,1,4]', 't'],['[4,5,9,9,1]', 'f'],['[5,9,9]', 'f']]],
     ],
+    
     [
         ['Assume x is any integer, which of the expressions can replace the following code segment so that x will always be the same value when executed?\n\nif (x > 0)\n{ \n&emsp;x = -x;\n}\nif (x < 0) \n{\n&emsp;x = 0;\n}\n', [['x = 0; ', 't'],['if (x > 0) x = -x; else x = 0; ', 'f'],['if (x < 0) x = 0; else x = -1;', 'f'],['if (x > 0) x = 0; ', 'f'],['if (x < 0) x = 0;', 'f']]],
         
@@ -199,6 +204,7 @@ var CSQuestions = [
         
         ['When will a sequential search be faster than a binary search?', [['The search value is not in the array', 'f'],['The value is in the middle of the array', 'f'],['The search value is the first element in the array', 't'],['The search value is the last element in the array', 'f'],['Sequential search can never be faster than binary search', 'f'],]],
     ],
+    
     [
         ['What is the correct HTML element to define important text?', [['&ltimportant>', 'f'],['&ltb>', 'f'],['&ltstrong>', 't'],['&lti>', 'f']]],
         ['How do you make a bulleted list with indexes?', [['&ltdl>', 'f'],['&ltlist>', 'f'],['&ltul>', 't'],['&ltol>', 'f'],]],

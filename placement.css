@@ -101,6 +101,9 @@
     display: flex;
     flex-flow: column nowrap;
     padding: max(10px, 1vw);
+   /* background: linear-gradient(to right, lightblue, dodgerblue) */
+   /* background: radial-gradient(lightblue, dodgerblue); */
+    background: linear-gradient(to bottom right, deepskyblue, mediumpurple);
 }
 
 .answer-container {
@@ -111,6 +114,8 @@
     align-items: center;
     justify-content: center;
     text-indent: 5px;
+    
+    
 }
 
 .results-text {
@@ -166,6 +171,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(to bottom left, mediumpurple, deepskyblue);
 }
 
 #submit-button {
