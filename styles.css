@@ -412,7 +412,7 @@
   
   nav ul a {
       display: block;
-      padding: 30px;
+      padding: 29px;
       border: none;
   }
   
@@ -871,3 +871,55 @@
   
       
   }
+
+    .words h1{
+    padding: 0;
+    margin: 0;
+    color: darkblue;
+    font-size: 50px;
+    font-family: monospace;
+    position: center;
+    }
+
+    span:before{
+        content: '';
+        animation: animate infinite 8s;
+    }
+
+   /* @keyframes animate{
+        0%{
+            opacity: 1;
+            content: 'MATH';
+
+        }
+
+        50%{
+            opacity: 0;
+            content: 'ENGINEERING';
+        }
+
+        100%{
+            opacity: 1;
+            content: 'COMPUTER SCIENCE'
+        }
+    } */
+
+
+/*
+.fade-in-text {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150px;
+  color: black;
+  animation: fadeIn linear 7s;
+  -webkit-animation: fadeIn linear 7s;
+  -moz-animation: fadeIn linear 7s;
+  -o-animation: fadeIn linear 7s;
+  -ms-animation: fadeIn linear 7s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+ */
