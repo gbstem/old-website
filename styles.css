@@ -283,7 +283,7 @@
   }
   
   .button2 {
-      background-color: #4CAF50; /* Green */
+      background-color: #67aeda; 
       border: none;
       color: white;
       margin: -10px;
@@ -292,6 +292,17 @@
       border-radius: 12px;
       position:relative;
   } 
+
+  .button3 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    margin: -10px;
+    padding: 7px 12px;
+    text-align: center;
+    border-radius: 12px;
+    position:relative;
+} 
   
   ul.socials img {
       width: 70px;
