@@ -42,22 +42,12 @@
         
     
                 <br><br>
-                <div id="donate-button-container">
-                    <div id="donate-button"></div>
-                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                    <script>
-                    PayPal.Donation.Button({
-                    env:'production',
-                    hosted_button_id:'7C9UEPBSK6B9J',
-                    image: {
-                    src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-                    alt:'Donate with PayPal button',
-                    title:'PayPal - The safer, easier way to pay online!',
-                    }
-                    }).render('#donate-button');
-                    </script>
-                    </div>
-            </div>
+                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                    <input type="hidden" name="hosted_button_id" value="D4LV5JB9YAEKN" />
+                    <input type="image" src="https://pics.paypal.com/00/s/MTNmOGZkMjAtYWI5MS00YjM3LWFkYjUtNTgyY2Y0OTI5ZWU4/file.PNG" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    <img alt="" border="10px" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="0.5" height="0.5" />
+                    </form>
+                    
         
     </main>
     
