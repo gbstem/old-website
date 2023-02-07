@@ -58,8 +58,6 @@
               margin-left: auto;
               margin-right: auto;
               width: 100%;
-              height: auto;
-              aspect-ratio: 1; /* will make width equal to height */
               object-fit: cover; /* use the one you need */
             }
 
