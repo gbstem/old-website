@@ -59,7 +59,7 @@
               margin-right: auto;
               width: 100%;
               aspect-ratio: 1;
-              object-fit: cover; /* use the one you need */
+              object-fit: cover; 
             }
 
             .center{
